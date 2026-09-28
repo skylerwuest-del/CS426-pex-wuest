@@ -1,0 +1,6 @@
+__init
+123412
+__AS_D_A_SD__S_
+1variable
+var@name
+clone.repo

@@ -1,0 +1,7 @@
+C:\Code\PEX Starter Pack\bin\Debug\ConsoleApplication.exe.config
+C:\Code\PEX Starter Pack\bin\Debug\ConsoleApplication.exe
+C:\Code\PEX Starter Pack\bin\Debug\ConsoleApplication.pdb
+C:\Code\PEX Starter Pack\obj\x86\Debug\SodaLanguage.csproj.AssemblyReference.cache
+C:\Code\PEX Starter Pack\obj\x86\Debug\SodaLanguage.csproj.CoreCompileInputs.cache
+C:\Code\PEX Starter Pack\obj\x86\Debug\ConsoleApplication.exe
+C:\Code\PEX Starter Pack\obj\x86\Debug\ConsoleApplication.pdb

@@ -1,0 +1,8 @@
+_hello_
+validCVariable
+_privateVar
+count1
+sum_total
+MAX_LIMIT
+camelCaseVar
+x2

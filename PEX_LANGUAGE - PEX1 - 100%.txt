@@ -1,0 +1,84 @@
+// This tells SableCC to put all of the code in a package called CS426
+Package CS426;
+
+// Helpers are sets that let you talk about multiple characters in the same way
+Helpers
+	whitespaces = '  ' | 9 | 10 | 13;
+	natural = ['1'..'9'];
+	whole = ['0' + natural];
+	letter = [['a'..'z'] + ['A'..'Z']];
+	digit = ['0'..'9'];
+	exponent = ('e'|'E')('-'|'+')(digit)+;
+	any_char = [0..0xffff];
+	string_char = ([any_char - (['"' + '$'])]);
+	escape_sequence = '$' '"' | '$' ''' | '$' '$';
+
+// PEX 1 - Lexer Portion
+Tokens
+	// 1. Data Type & Declaration Keywords 
+	kw_int = 'sevenup';
+	kw_float = 'rootbeer';
+	kw_str = 'sprite';
+	kw_const = 'coke';
+
+	// 2. Control Flow Keywords & Symbols
+	kw_if = 'pepsi';
+	kw_else = 'dietpepsi';
+	kw_while = 'whelchs';
+	kw_main = 'carbonation';
+	kw_return = 'rc';
+	l_brace = 'carbonating'; // {
+    	r_brace = 'carbonated';  // }
+ 
+	// 3. Literals (Values)
+	integer = natural whole* | '0';
+	float = ((whole)+'.'(whole)+) | (whole'.'(whole)?(whole)?exponent);
+	string_literal = '"' (string_char | escape_sequence)* '"';
+
+
+	// 4. Mathematical & Logical Operators (and EOL) 
+	eol = '*';
+	assign = 'dew';
+	plus = 'a&w';
+	minus = 'sundrop';         	// Subtraction
+    	neg = '-';                 		// Negation 
+	mult = 'mug';
+    	div = 'drpepper';   	// Division (/)
+    	l_paren = 'bottle';        // Open parenthesis (
+    	r_paren = 'cap';           // Close parenthesis )
+   	and_op = 'jolt';           // AND
+    	or_op = 'zevia';           // OR
+   	not_op = 'coffee';         // NOT
+
+	// 5. Comparison Operators 
+   	eq = 'squirt';    			 // == (Equality)
+    	gt = 'sugar';    			 // > (Greater than)
+    	gte = 'caffeine';    // >= (Greater than or equal to)
+    	lt = 'diet';     // < (Less than)
+    	lte = 'zero';    // <= (Less than or equal to)
+
+	// 6. Identifiers & Ignored Tokens 
+	id = ((letter | ('_' (letter | digit))) (letter | digit | '_' (letter | digit)))*;
+	comment = 'oO' ([[0..0xffff] - [10 + 13]])*;
+	blank = whitespaces+;
+	double_underscore = ('__')+;
+
+Ignored Tokens
+	blank, comment;
+
+
+// PEX 2 - Parser Portion
+Productions
+	program = statements;
+	statements = {multiple} statement statements | {single} ;
+	statement = {declaration} declare_statement;
+	
+	declare_statement = [type] : id [varname] : id eol;
+// things I need to inlclude 
+//declarations
+//assignments
+// Function call
+// Conditional Satemets
+//Loops
+
+	
