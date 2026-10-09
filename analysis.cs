@@ -16,6 +16,51 @@ public interface Analysis : Switch
 
     void CaseStart(Start node);
     void CaseAProgram(AProgram node);
+    void CaseAMultipleStatements(AMultipleStatements node);
+    void CaseASingleStatements(ASingleStatements node);
+    void CaseAAssignmentStatement(AAssignmentStatement node);
+    void CaseADeclarationStatement(ADeclarationStatement node);
+    void CaseAConstantStatement(AConstantStatement node);
+    void CaseACallStatement(ACallStatement node);
+    void CaseAConditionalStatement(AConditionalStatement node);
+    void CaseALoopStatement(ALoopStatement node);
+    void CaseAAssignStatement(AAssignStatement node);
+    void CaseADeclareStatement(ADeclareStatement node);
+    void CaseAConstantDeclareConstStatement(AConstantDeclareConstStatement node);
+    void CaseAConstIntConstType(AConstIntConstType node);
+    void CaseAConstFloatConstType(AConstFloatConstType node);
+    void CaseAConstStringConstType(AConstStringConstType node);
+    void CaseAIntType(AIntType node);
+    void CaseAFloatType(AFloatType node);
+    void CaseAStringType(AStringType node);
+    void CaseAFunctionCallStatement(AFunctionCallStatement node);
+    void CaseASomeParameters(ASomeParameters node);
+    void CaseAEmptyParameters(AEmptyParameters node);
+    void CaseAOneExpressions(AOneExpressions node);
+    void CaseAManyExpressions(AManyExpressions node);
+    void CaseAAddExpression(AAddExpression node);
+    void CaseASubtractExpression(ASubtractExpression node);
+    void CaseAPassExpression(APassExpression node);
+    void CaseAMultiplyExpression2(AMultiplyExpression2 node);
+    void CaseADivideExpression2(ADivideExpression2 node);
+    void CaseAPassExpression2(APassExpression2 node);
+    void CaseANegativeExpression3(ANegativeExpression3 node);
+    void CaseAPassExpression3(APassExpression3 node);
+    void CaseAIntOperand(AIntOperand node);
+    void CaseAFloatOperand(AFloatOperand node);
+    void CaseAStringOperand(AStringOperand node);
+    void CaseAVariableOperand(AVariableOperand node);
+    void CaseAIfConditionalStatement(AIfConditionalStatement node);
+    void CaseAPresentElsePart(APresentElsePart node);
+    void CaseAAbsentElsePart(AAbsentElsePart node);
+    void CaseACondition(ACondition node);
+    void CaseAEqualConditionalLogic(AEqualConditionalLogic node);
+    void CaseAGreaterConditionalLogic(AGreaterConditionalLogic node);
+    void CaseAGreaterEqConditionalLogic(AGreaterEqConditionalLogic node);
+    void CaseALessConditionalLogic(ALessConditionalLogic node);
+    void CaseALessEqConditionalLogic(ALessEqConditionalLogic node);
+    void CaseAWhileLoopStatement(AWhileLoopStatement node);
+    void CaseAProcedureDefinition(AProcedureDefinition node);
 
     void CaseTKwInt(TKwInt node);
     void CaseTKwFloat(TKwFloat node);
@@ -52,6 +97,7 @@ public interface Analysis : Switch
     void CaseTComment(TComment node);
     void CaseTBlank(TBlank node);
     void CaseTDoubleUnderscore(TDoubleUnderscore node);
+    void CaseTComma(TComma node);
     void CaseEOF(EOF node);
 }
 
@@ -119,6 +165,186 @@ public class AnalysisAdapter : Analysis
     }
 
     public virtual void CaseAProgram(AProgram node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAMultipleStatements(AMultipleStatements node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseASingleStatements(ASingleStatements node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAAssignmentStatement(AAssignmentStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseADeclarationStatement(ADeclarationStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAConstantStatement(AConstantStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseACallStatement(ACallStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAConditionalStatement(AConditionalStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseALoopStatement(ALoopStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAAssignStatement(AAssignStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseADeclareStatement(ADeclareStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAConstantDeclareConstStatement(AConstantDeclareConstStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAConstIntConstType(AConstIntConstType node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAConstFloatConstType(AConstFloatConstType node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAConstStringConstType(AConstStringConstType node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAIntType(AIntType node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAFloatType(AFloatType node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAStringType(AStringType node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAFunctionCallStatement(AFunctionCallStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseASomeParameters(ASomeParameters node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAEmptyParameters(AEmptyParameters node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAOneExpressions(AOneExpressions node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAManyExpressions(AManyExpressions node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAAddExpression(AAddExpression node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseASubtractExpression(ASubtractExpression node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAPassExpression(APassExpression node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAMultiplyExpression2(AMultiplyExpression2 node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseADivideExpression2(ADivideExpression2 node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAPassExpression2(APassExpression2 node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseANegativeExpression3(ANegativeExpression3 node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAPassExpression3(APassExpression3 node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAIntOperand(AIntOperand node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAFloatOperand(AFloatOperand node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAStringOperand(AStringOperand node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAVariableOperand(AVariableOperand node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAIfConditionalStatement(AIfConditionalStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAPresentElsePart(APresentElsePart node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAAbsentElsePart(AAbsentElsePart node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseACondition(ACondition node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAEqualConditionalLogic(AEqualConditionalLogic node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAGreaterConditionalLogic(AGreaterConditionalLogic node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAGreaterEqConditionalLogic(AGreaterEqConditionalLogic node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseALessConditionalLogic(ALessConditionalLogic node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseALessEqConditionalLogic(ALessEqConditionalLogic node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAWhileLoopStatement(AWhileLoopStatement node)
+    {
+        DefaultCase(node);
+    }
+    public virtual void CaseAProcedureDefinition(AProcedureDefinition node)
     {
         DefaultCase(node);
     }
@@ -263,6 +489,10 @@ public class AnalysisAdapter : Analysis
     {
         DefaultCase(node);
     }
+    public virtual void CaseTComma(TComma node)
+    {
+        DefaultCase(node);
+    }
 
     public virtual void CaseEOF(EOF node)
     {
@@ -316,11 +546,1086 @@ public class DepthFirstAdapter : AnalysisAdapter
     public override void CaseAProgram(AProgram node)
     {
         InAProgram(node);
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        OutAProgram(node);
+    }
+    public virtual void InAMultipleStatements(AMultipleStatements node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAMultipleStatements(AMultipleStatements node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAMultipleStatements(AMultipleStatements node)
+    {
+        InAMultipleStatements(node);
+        if(node.GetStatement() != null)
+        {
+            node.GetStatement().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        OutAMultipleStatements(node);
+    }
+    public virtual void InASingleStatements(ASingleStatements node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutASingleStatements(ASingleStatements node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseASingleStatements(ASingleStatements node)
+    {
+        InASingleStatements(node);
+        OutASingleStatements(node);
+    }
+    public virtual void InAAssignmentStatement(AAssignmentStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAAssignmentStatement(AAssignmentStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAAssignmentStatement(AAssignmentStatement node)
+    {
+        InAAssignmentStatement(node);
+        if(node.GetAssignStatement() != null)
+        {
+            node.GetAssignStatement().Apply(this);
+        }
+        OutAAssignmentStatement(node);
+    }
+    public virtual void InADeclarationStatement(ADeclarationStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutADeclarationStatement(ADeclarationStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseADeclarationStatement(ADeclarationStatement node)
+    {
+        InADeclarationStatement(node);
+        if(node.GetDeclareStatement() != null)
+        {
+            node.GetDeclareStatement().Apply(this);
+        }
+        OutADeclarationStatement(node);
+    }
+    public virtual void InAConstantStatement(AConstantStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstantStatement(AConstantStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstantStatement(AConstantStatement node)
+    {
+        InAConstantStatement(node);
+        if(node.GetDeclareConstStatement() != null)
+        {
+            node.GetDeclareConstStatement().Apply(this);
+        }
+        OutAConstantStatement(node);
+    }
+    public virtual void InACallStatement(ACallStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutACallStatement(ACallStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseACallStatement(ACallStatement node)
+    {
+        InACallStatement(node);
+        if(node.GetFunctionCallStatement() != null)
+        {
+            node.GetFunctionCallStatement().Apply(this);
+        }
+        OutACallStatement(node);
+    }
+    public virtual void InAConditionalStatement(AConditionalStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConditionalStatement(AConditionalStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConditionalStatement(AConditionalStatement node)
+    {
+        InAConditionalStatement(node);
+        if(node.GetConditionalStatement() != null)
+        {
+            node.GetConditionalStatement().Apply(this);
+        }
+        OutAConditionalStatement(node);
+    }
+    public virtual void InALoopStatement(ALoopStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutALoopStatement(ALoopStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseALoopStatement(ALoopStatement node)
+    {
+        InALoopStatement(node);
+        if(node.GetLoopStatement() != null)
+        {
+            node.GetLoopStatement().Apply(this);
+        }
+        OutALoopStatement(node);
+    }
+    public virtual void InAAssignStatement(AAssignStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAAssignStatement(AAssignStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAAssignStatement(AAssignStatement node)
+    {
+        InAAssignStatement(node);
+        if(node.GetId() != null)
+        {
+            node.GetId().Apply(this);
+        }
+        if(node.GetAssign() != null)
+        {
+            node.GetAssign().Apply(this);
+        }
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
         if(node.GetEol() != null)
         {
             node.GetEol().Apply(this);
         }
-        OutAProgram(node);
+        OutAAssignStatement(node);
+    }
+    public virtual void InADeclareStatement(ADeclareStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutADeclareStatement(ADeclareStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseADeclareStatement(ADeclareStatement node)
+    {
+        InADeclareStatement(node);
+        if(node.GetType() != null)
+        {
+            node.GetType().Apply(this);
+        }
+        if(node.GetVarname() != null)
+        {
+            node.GetVarname().Apply(this);
+        }
+        if(node.GetEol() != null)
+        {
+            node.GetEol().Apply(this);
+        }
+        OutADeclareStatement(node);
+    }
+    public virtual void InAConstantDeclareConstStatement(AConstantDeclareConstStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstantDeclareConstStatement(AConstantDeclareConstStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstantDeclareConstStatement(AConstantDeclareConstStatement node)
+    {
+        InAConstantDeclareConstStatement(node);
+        if(node.GetKwConst() != null)
+        {
+            node.GetKwConst().Apply(this);
+        }
+        if(node.GetConstType() != null)
+        {
+            node.GetConstType().Apply(this);
+        }
+        if(node.GetEol() != null)
+        {
+            node.GetEol().Apply(this);
+        }
+        OutAConstantDeclareConstStatement(node);
+    }
+    public virtual void InAConstIntConstType(AConstIntConstType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstIntConstType(AConstIntConstType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstIntConstType(AConstIntConstType node)
+    {
+        InAConstIntConstType(node);
+        if(node.GetKwInt() != null)
+        {
+            node.GetKwInt().Apply(this);
+        }
+        if(node.GetVarname() != null)
+        {
+            node.GetVarname().Apply(this);
+        }
+        if(node.GetAssign() != null)
+        {
+            node.GetAssign().Apply(this);
+        }
+        if(node.GetNeg() != null)
+        {
+            node.GetNeg().Apply(this);
+        }
+        if(node.GetInteger() != null)
+        {
+            node.GetInteger().Apply(this);
+        }
+        OutAConstIntConstType(node);
+    }
+    public virtual void InAConstFloatConstType(AConstFloatConstType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstFloatConstType(AConstFloatConstType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstFloatConstType(AConstFloatConstType node)
+    {
+        InAConstFloatConstType(node);
+        if(node.GetKwFloat() != null)
+        {
+            node.GetKwFloat().Apply(this);
+        }
+        if(node.GetVarname() != null)
+        {
+            node.GetVarname().Apply(this);
+        }
+        if(node.GetAssign() != null)
+        {
+            node.GetAssign().Apply(this);
+        }
+        if(node.GetNeg() != null)
+        {
+            node.GetNeg().Apply(this);
+        }
+        if(node.GetFloat() != null)
+        {
+            node.GetFloat().Apply(this);
+        }
+        OutAConstFloatConstType(node);
+    }
+    public virtual void InAConstStringConstType(AConstStringConstType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstStringConstType(AConstStringConstType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstStringConstType(AConstStringConstType node)
+    {
+        InAConstStringConstType(node);
+        if(node.GetKwStr() != null)
+        {
+            node.GetKwStr().Apply(this);
+        }
+        if(node.GetVarname() != null)
+        {
+            node.GetVarname().Apply(this);
+        }
+        if(node.GetAssign() != null)
+        {
+            node.GetAssign().Apply(this);
+        }
+        if(node.GetStringLiteral() != null)
+        {
+            node.GetStringLiteral().Apply(this);
+        }
+        OutAConstStringConstType(node);
+    }
+    public virtual void InAIntType(AIntType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAIntType(AIntType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAIntType(AIntType node)
+    {
+        InAIntType(node);
+        if(node.GetKwInt() != null)
+        {
+            node.GetKwInt().Apply(this);
+        }
+        OutAIntType(node);
+    }
+    public virtual void InAFloatType(AFloatType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAFloatType(AFloatType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAFloatType(AFloatType node)
+    {
+        InAFloatType(node);
+        if(node.GetKwFloat() != null)
+        {
+            node.GetKwFloat().Apply(this);
+        }
+        OutAFloatType(node);
+    }
+    public virtual void InAStringType(AStringType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAStringType(AStringType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAStringType(AStringType node)
+    {
+        InAStringType(node);
+        if(node.GetKwStr() != null)
+        {
+            node.GetKwStr().Apply(this);
+        }
+        OutAStringType(node);
+    }
+    public virtual void InAFunctionCallStatement(AFunctionCallStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAFunctionCallStatement(AFunctionCallStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAFunctionCallStatement(AFunctionCallStatement node)
+    {
+        InAFunctionCallStatement(node);
+        if(node.GetId() != null)
+        {
+            node.GetId().Apply(this);
+        }
+        if(node.GetLParen() != null)
+        {
+            node.GetLParen().Apply(this);
+        }
+        if(node.GetParameters() != null)
+        {
+            node.GetParameters().Apply(this);
+        }
+        if(node.GetRParen() != null)
+        {
+            node.GetRParen().Apply(this);
+        }
+        if(node.GetEol() != null)
+        {
+            node.GetEol().Apply(this);
+        }
+        OutAFunctionCallStatement(node);
+    }
+    public virtual void InASomeParameters(ASomeParameters node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutASomeParameters(ASomeParameters node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseASomeParameters(ASomeParameters node)
+    {
+        InASomeParameters(node);
+        if(node.GetExpressions() != null)
+        {
+            node.GetExpressions().Apply(this);
+        }
+        OutASomeParameters(node);
+    }
+    public virtual void InAEmptyParameters(AEmptyParameters node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAEmptyParameters(AEmptyParameters node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAEmptyParameters(AEmptyParameters node)
+    {
+        InAEmptyParameters(node);
+        OutAEmptyParameters(node);
+    }
+    public virtual void InAOneExpressions(AOneExpressions node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAOneExpressions(AOneExpressions node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAOneExpressions(AOneExpressions node)
+    {
+        InAOneExpressions(node);
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        OutAOneExpressions(node);
+    }
+    public virtual void InAManyExpressions(AManyExpressions node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAManyExpressions(AManyExpressions node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAManyExpressions(AManyExpressions node)
+    {
+        InAManyExpressions(node);
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        if(node.GetComma() != null)
+        {
+            node.GetComma().Apply(this);
+        }
+        if(node.GetExpressions() != null)
+        {
+            node.GetExpressions().Apply(this);
+        }
+        OutAManyExpressions(node);
+    }
+    public virtual void InAAddExpression(AAddExpression node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAAddExpression(AAddExpression node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAAddExpression(AAddExpression node)
+    {
+        InAAddExpression(node);
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        if(node.GetPlus() != null)
+        {
+            node.GetPlus().Apply(this);
+        }
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        OutAAddExpression(node);
+    }
+    public virtual void InASubtractExpression(ASubtractExpression node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutASubtractExpression(ASubtractExpression node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseASubtractExpression(ASubtractExpression node)
+    {
+        InASubtractExpression(node);
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        if(node.GetMinus() != null)
+        {
+            node.GetMinus().Apply(this);
+        }
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        OutASubtractExpression(node);
+    }
+    public virtual void InAPassExpression(APassExpression node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAPassExpression(APassExpression node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAPassExpression(APassExpression node)
+    {
+        InAPassExpression(node);
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        OutAPassExpression(node);
+    }
+    public virtual void InAMultiplyExpression2(AMultiplyExpression2 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAMultiplyExpression2(AMultiplyExpression2 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAMultiplyExpression2(AMultiplyExpression2 node)
+    {
+        InAMultiplyExpression2(node);
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        if(node.GetMult() != null)
+        {
+            node.GetMult().Apply(this);
+        }
+        if(node.GetExpression3() != null)
+        {
+            node.GetExpression3().Apply(this);
+        }
+        OutAMultiplyExpression2(node);
+    }
+    public virtual void InADivideExpression2(ADivideExpression2 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutADivideExpression2(ADivideExpression2 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseADivideExpression2(ADivideExpression2 node)
+    {
+        InADivideExpression2(node);
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        if(node.GetDiv() != null)
+        {
+            node.GetDiv().Apply(this);
+        }
+        if(node.GetExpression3() != null)
+        {
+            node.GetExpression3().Apply(this);
+        }
+        OutADivideExpression2(node);
+    }
+    public virtual void InAPassExpression2(APassExpression2 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAPassExpression2(APassExpression2 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAPassExpression2(APassExpression2 node)
+    {
+        InAPassExpression2(node);
+        if(node.GetExpression3() != null)
+        {
+            node.GetExpression3().Apply(this);
+        }
+        OutAPassExpression2(node);
+    }
+    public virtual void InANegativeExpression3(ANegativeExpression3 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutANegativeExpression3(ANegativeExpression3 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseANegativeExpression3(ANegativeExpression3 node)
+    {
+        InANegativeExpression3(node);
+        if(node.GetNeg() != null)
+        {
+            node.GetNeg().Apply(this);
+        }
+        if(node.GetOperand() != null)
+        {
+            node.GetOperand().Apply(this);
+        }
+        OutANegativeExpression3(node);
+    }
+    public virtual void InAPassExpression3(APassExpression3 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAPassExpression3(APassExpression3 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAPassExpression3(APassExpression3 node)
+    {
+        InAPassExpression3(node);
+        if(node.GetOperand() != null)
+        {
+            node.GetOperand().Apply(this);
+        }
+        OutAPassExpression3(node);
+    }
+    public virtual void InAIntOperand(AIntOperand node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAIntOperand(AIntOperand node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAIntOperand(AIntOperand node)
+    {
+        InAIntOperand(node);
+        if(node.GetInteger() != null)
+        {
+            node.GetInteger().Apply(this);
+        }
+        OutAIntOperand(node);
+    }
+    public virtual void InAFloatOperand(AFloatOperand node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAFloatOperand(AFloatOperand node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAFloatOperand(AFloatOperand node)
+    {
+        InAFloatOperand(node);
+        if(node.GetFloat() != null)
+        {
+            node.GetFloat().Apply(this);
+        }
+        OutAFloatOperand(node);
+    }
+    public virtual void InAStringOperand(AStringOperand node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAStringOperand(AStringOperand node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAStringOperand(AStringOperand node)
+    {
+        InAStringOperand(node);
+        if(node.GetStringLiteral() != null)
+        {
+            node.GetStringLiteral().Apply(this);
+        }
+        OutAStringOperand(node);
+    }
+    public virtual void InAVariableOperand(AVariableOperand node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAVariableOperand(AVariableOperand node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAVariableOperand(AVariableOperand node)
+    {
+        InAVariableOperand(node);
+        if(node.GetId() != null)
+        {
+            node.GetId().Apply(this);
+        }
+        OutAVariableOperand(node);
+    }
+    public virtual void InAIfConditionalStatement(AIfConditionalStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAIfConditionalStatement(AIfConditionalStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAIfConditionalStatement(AIfConditionalStatement node)
+    {
+        InAIfConditionalStatement(node);
+        if(node.GetKwIf() != null)
+        {
+            node.GetKwIf().Apply(this);
+        }
+        if(node.GetLParen() != null)
+        {
+            node.GetLParen().Apply(this);
+        }
+        if(node.GetCondition() != null)
+        {
+            node.GetCondition().Apply(this);
+        }
+        if(node.GetRParen() != null)
+        {
+            node.GetRParen().Apply(this);
+        }
+        if(node.GetLBrace() != null)
+        {
+            node.GetLBrace().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetRBrace() != null)
+        {
+            node.GetRBrace().Apply(this);
+        }
+        if(node.GetElsePart() != null)
+        {
+            node.GetElsePart().Apply(this);
+        }
+        OutAIfConditionalStatement(node);
+    }
+    public virtual void InAPresentElsePart(APresentElsePart node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAPresentElsePart(APresentElsePart node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAPresentElsePart(APresentElsePart node)
+    {
+        InAPresentElsePart(node);
+        if(node.GetKwElse() != null)
+        {
+            node.GetKwElse().Apply(this);
+        }
+        if(node.GetLBrace() != null)
+        {
+            node.GetLBrace().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetRBrace() != null)
+        {
+            node.GetRBrace().Apply(this);
+        }
+        OutAPresentElsePart(node);
+    }
+    public virtual void InAAbsentElsePart(AAbsentElsePart node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAAbsentElsePart(AAbsentElsePart node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAAbsentElsePart(AAbsentElsePart node)
+    {
+        InAAbsentElsePart(node);
+        OutAAbsentElsePart(node);
+    }
+    public virtual void InACondition(ACondition node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutACondition(ACondition node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseACondition(ACondition node)
+    {
+        InACondition(node);
+        if(node.GetLeft() != null)
+        {
+            node.GetLeft().Apply(this);
+        }
+        if(node.GetConditionalLogic() != null)
+        {
+            node.GetConditionalLogic().Apply(this);
+        }
+        if(node.GetRight() != null)
+        {
+            node.GetRight().Apply(this);
+        }
+        OutACondition(node);
+    }
+    public virtual void InAEqualConditionalLogic(AEqualConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAEqualConditionalLogic(AEqualConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAEqualConditionalLogic(AEqualConditionalLogic node)
+    {
+        InAEqualConditionalLogic(node);
+        if(node.GetEq() != null)
+        {
+            node.GetEq().Apply(this);
+        }
+        OutAEqualConditionalLogic(node);
+    }
+    public virtual void InAGreaterConditionalLogic(AGreaterConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAGreaterConditionalLogic(AGreaterConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAGreaterConditionalLogic(AGreaterConditionalLogic node)
+    {
+        InAGreaterConditionalLogic(node);
+        if(node.GetGt() != null)
+        {
+            node.GetGt().Apply(this);
+        }
+        OutAGreaterConditionalLogic(node);
+    }
+    public virtual void InAGreaterEqConditionalLogic(AGreaterEqConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAGreaterEqConditionalLogic(AGreaterEqConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAGreaterEqConditionalLogic(AGreaterEqConditionalLogic node)
+    {
+        InAGreaterEqConditionalLogic(node);
+        if(node.GetGte() != null)
+        {
+            node.GetGte().Apply(this);
+        }
+        OutAGreaterEqConditionalLogic(node);
+    }
+    public virtual void InALessConditionalLogic(ALessConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutALessConditionalLogic(ALessConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseALessConditionalLogic(ALessConditionalLogic node)
+    {
+        InALessConditionalLogic(node);
+        if(node.GetLt() != null)
+        {
+            node.GetLt().Apply(this);
+        }
+        OutALessConditionalLogic(node);
+    }
+    public virtual void InALessEqConditionalLogic(ALessEqConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutALessEqConditionalLogic(ALessEqConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseALessEqConditionalLogic(ALessEqConditionalLogic node)
+    {
+        InALessEqConditionalLogic(node);
+        if(node.GetLte() != null)
+        {
+            node.GetLte().Apply(this);
+        }
+        OutALessEqConditionalLogic(node);
+    }
+    public virtual void InAWhileLoopStatement(AWhileLoopStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAWhileLoopStatement(AWhileLoopStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAWhileLoopStatement(AWhileLoopStatement node)
+    {
+        InAWhileLoopStatement(node);
+        if(node.GetKwWhile() != null)
+        {
+            node.GetKwWhile().Apply(this);
+        }
+        if(node.GetLParen() != null)
+        {
+            node.GetLParen().Apply(this);
+        }
+        if(node.GetCondition() != null)
+        {
+            node.GetCondition().Apply(this);
+        }
+        if(node.GetRParen() != null)
+        {
+            node.GetRParen().Apply(this);
+        }
+        if(node.GetLBrace() != null)
+        {
+            node.GetLBrace().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetRBrace() != null)
+        {
+            node.GetRBrace().Apply(this);
+        }
+        OutAWhileLoopStatement(node);
+    }
+    public virtual void InAProcedureDefinition(AProcedureDefinition node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAProcedureDefinition(AProcedureDefinition node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAProcedureDefinition(AProcedureDefinition node)
+    {
+        InAProcedureDefinition(node);
+        if(node.GetProcedureName() != null)
+        {
+            node.GetProcedureName().Apply(this);
+        }
+        if(node.GetLParen() != null)
+        {
+            node.GetLParen().Apply(this);
+        }
+        if(node.GetParameters() != null)
+        {
+            node.GetParameters().Apply(this);
+        }
+        if(node.GetRParen() != null)
+        {
+            node.GetRParen().Apply(this);
+        }
+        if(node.GetLBrace() != null)
+        {
+            node.GetLBrace().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetRBrace() != null)
+        {
+            node.GetRBrace().Apply(this);
+        }
+        OutAProcedureDefinition(node);
     }
 }
 
@@ -366,11 +1671,1086 @@ public class ReversedDepthFirstAdapter : AnalysisAdapter
     public override void CaseAProgram(AProgram node)
     {
         InAProgram(node);
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        OutAProgram(node);
+    }
+    public virtual void InAMultipleStatements(AMultipleStatements node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAMultipleStatements(AMultipleStatements node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAMultipleStatements(AMultipleStatements node)
+    {
+        InAMultipleStatements(node);
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetStatement() != null)
+        {
+            node.GetStatement().Apply(this);
+        }
+        OutAMultipleStatements(node);
+    }
+    public virtual void InASingleStatements(ASingleStatements node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutASingleStatements(ASingleStatements node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseASingleStatements(ASingleStatements node)
+    {
+        InASingleStatements(node);
+        OutASingleStatements(node);
+    }
+    public virtual void InAAssignmentStatement(AAssignmentStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAAssignmentStatement(AAssignmentStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAAssignmentStatement(AAssignmentStatement node)
+    {
+        InAAssignmentStatement(node);
+        if(node.GetAssignStatement() != null)
+        {
+            node.GetAssignStatement().Apply(this);
+        }
+        OutAAssignmentStatement(node);
+    }
+    public virtual void InADeclarationStatement(ADeclarationStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutADeclarationStatement(ADeclarationStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseADeclarationStatement(ADeclarationStatement node)
+    {
+        InADeclarationStatement(node);
+        if(node.GetDeclareStatement() != null)
+        {
+            node.GetDeclareStatement().Apply(this);
+        }
+        OutADeclarationStatement(node);
+    }
+    public virtual void InAConstantStatement(AConstantStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstantStatement(AConstantStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstantStatement(AConstantStatement node)
+    {
+        InAConstantStatement(node);
+        if(node.GetDeclareConstStatement() != null)
+        {
+            node.GetDeclareConstStatement().Apply(this);
+        }
+        OutAConstantStatement(node);
+    }
+    public virtual void InACallStatement(ACallStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutACallStatement(ACallStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseACallStatement(ACallStatement node)
+    {
+        InACallStatement(node);
+        if(node.GetFunctionCallStatement() != null)
+        {
+            node.GetFunctionCallStatement().Apply(this);
+        }
+        OutACallStatement(node);
+    }
+    public virtual void InAConditionalStatement(AConditionalStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConditionalStatement(AConditionalStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConditionalStatement(AConditionalStatement node)
+    {
+        InAConditionalStatement(node);
+        if(node.GetConditionalStatement() != null)
+        {
+            node.GetConditionalStatement().Apply(this);
+        }
+        OutAConditionalStatement(node);
+    }
+    public virtual void InALoopStatement(ALoopStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutALoopStatement(ALoopStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseALoopStatement(ALoopStatement node)
+    {
+        InALoopStatement(node);
+        if(node.GetLoopStatement() != null)
+        {
+            node.GetLoopStatement().Apply(this);
+        }
+        OutALoopStatement(node);
+    }
+    public virtual void InAAssignStatement(AAssignStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAAssignStatement(AAssignStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAAssignStatement(AAssignStatement node)
+    {
+        InAAssignStatement(node);
         if(node.GetEol() != null)
         {
             node.GetEol().Apply(this);
         }
-        OutAProgram(node);
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        if(node.GetAssign() != null)
+        {
+            node.GetAssign().Apply(this);
+        }
+        if(node.GetId() != null)
+        {
+            node.GetId().Apply(this);
+        }
+        OutAAssignStatement(node);
+    }
+    public virtual void InADeclareStatement(ADeclareStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutADeclareStatement(ADeclareStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseADeclareStatement(ADeclareStatement node)
+    {
+        InADeclareStatement(node);
+        if(node.GetEol() != null)
+        {
+            node.GetEol().Apply(this);
+        }
+        if(node.GetVarname() != null)
+        {
+            node.GetVarname().Apply(this);
+        }
+        if(node.GetType() != null)
+        {
+            node.GetType().Apply(this);
+        }
+        OutADeclareStatement(node);
+    }
+    public virtual void InAConstantDeclareConstStatement(AConstantDeclareConstStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstantDeclareConstStatement(AConstantDeclareConstStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstantDeclareConstStatement(AConstantDeclareConstStatement node)
+    {
+        InAConstantDeclareConstStatement(node);
+        if(node.GetEol() != null)
+        {
+            node.GetEol().Apply(this);
+        }
+        if(node.GetConstType() != null)
+        {
+            node.GetConstType().Apply(this);
+        }
+        if(node.GetKwConst() != null)
+        {
+            node.GetKwConst().Apply(this);
+        }
+        OutAConstantDeclareConstStatement(node);
+    }
+    public virtual void InAConstIntConstType(AConstIntConstType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstIntConstType(AConstIntConstType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstIntConstType(AConstIntConstType node)
+    {
+        InAConstIntConstType(node);
+        if(node.GetInteger() != null)
+        {
+            node.GetInteger().Apply(this);
+        }
+        if(node.GetNeg() != null)
+        {
+            node.GetNeg().Apply(this);
+        }
+        if(node.GetAssign() != null)
+        {
+            node.GetAssign().Apply(this);
+        }
+        if(node.GetVarname() != null)
+        {
+            node.GetVarname().Apply(this);
+        }
+        if(node.GetKwInt() != null)
+        {
+            node.GetKwInt().Apply(this);
+        }
+        OutAConstIntConstType(node);
+    }
+    public virtual void InAConstFloatConstType(AConstFloatConstType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstFloatConstType(AConstFloatConstType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstFloatConstType(AConstFloatConstType node)
+    {
+        InAConstFloatConstType(node);
+        if(node.GetFloat() != null)
+        {
+            node.GetFloat().Apply(this);
+        }
+        if(node.GetNeg() != null)
+        {
+            node.GetNeg().Apply(this);
+        }
+        if(node.GetAssign() != null)
+        {
+            node.GetAssign().Apply(this);
+        }
+        if(node.GetVarname() != null)
+        {
+            node.GetVarname().Apply(this);
+        }
+        if(node.GetKwFloat() != null)
+        {
+            node.GetKwFloat().Apply(this);
+        }
+        OutAConstFloatConstType(node);
+    }
+    public virtual void InAConstStringConstType(AConstStringConstType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAConstStringConstType(AConstStringConstType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAConstStringConstType(AConstStringConstType node)
+    {
+        InAConstStringConstType(node);
+        if(node.GetStringLiteral() != null)
+        {
+            node.GetStringLiteral().Apply(this);
+        }
+        if(node.GetAssign() != null)
+        {
+            node.GetAssign().Apply(this);
+        }
+        if(node.GetVarname() != null)
+        {
+            node.GetVarname().Apply(this);
+        }
+        if(node.GetKwStr() != null)
+        {
+            node.GetKwStr().Apply(this);
+        }
+        OutAConstStringConstType(node);
+    }
+    public virtual void InAIntType(AIntType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAIntType(AIntType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAIntType(AIntType node)
+    {
+        InAIntType(node);
+        if(node.GetKwInt() != null)
+        {
+            node.GetKwInt().Apply(this);
+        }
+        OutAIntType(node);
+    }
+    public virtual void InAFloatType(AFloatType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAFloatType(AFloatType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAFloatType(AFloatType node)
+    {
+        InAFloatType(node);
+        if(node.GetKwFloat() != null)
+        {
+            node.GetKwFloat().Apply(this);
+        }
+        OutAFloatType(node);
+    }
+    public virtual void InAStringType(AStringType node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAStringType(AStringType node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAStringType(AStringType node)
+    {
+        InAStringType(node);
+        if(node.GetKwStr() != null)
+        {
+            node.GetKwStr().Apply(this);
+        }
+        OutAStringType(node);
+    }
+    public virtual void InAFunctionCallStatement(AFunctionCallStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAFunctionCallStatement(AFunctionCallStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAFunctionCallStatement(AFunctionCallStatement node)
+    {
+        InAFunctionCallStatement(node);
+        if(node.GetEol() != null)
+        {
+            node.GetEol().Apply(this);
+        }
+        if(node.GetRParen() != null)
+        {
+            node.GetRParen().Apply(this);
+        }
+        if(node.GetParameters() != null)
+        {
+            node.GetParameters().Apply(this);
+        }
+        if(node.GetLParen() != null)
+        {
+            node.GetLParen().Apply(this);
+        }
+        if(node.GetId() != null)
+        {
+            node.GetId().Apply(this);
+        }
+        OutAFunctionCallStatement(node);
+    }
+    public virtual void InASomeParameters(ASomeParameters node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutASomeParameters(ASomeParameters node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseASomeParameters(ASomeParameters node)
+    {
+        InASomeParameters(node);
+        if(node.GetExpressions() != null)
+        {
+            node.GetExpressions().Apply(this);
+        }
+        OutASomeParameters(node);
+    }
+    public virtual void InAEmptyParameters(AEmptyParameters node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAEmptyParameters(AEmptyParameters node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAEmptyParameters(AEmptyParameters node)
+    {
+        InAEmptyParameters(node);
+        OutAEmptyParameters(node);
+    }
+    public virtual void InAOneExpressions(AOneExpressions node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAOneExpressions(AOneExpressions node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAOneExpressions(AOneExpressions node)
+    {
+        InAOneExpressions(node);
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        OutAOneExpressions(node);
+    }
+    public virtual void InAManyExpressions(AManyExpressions node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAManyExpressions(AManyExpressions node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAManyExpressions(AManyExpressions node)
+    {
+        InAManyExpressions(node);
+        if(node.GetExpressions() != null)
+        {
+            node.GetExpressions().Apply(this);
+        }
+        if(node.GetComma() != null)
+        {
+            node.GetComma().Apply(this);
+        }
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        OutAManyExpressions(node);
+    }
+    public virtual void InAAddExpression(AAddExpression node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAAddExpression(AAddExpression node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAAddExpression(AAddExpression node)
+    {
+        InAAddExpression(node);
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        if(node.GetPlus() != null)
+        {
+            node.GetPlus().Apply(this);
+        }
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        OutAAddExpression(node);
+    }
+    public virtual void InASubtractExpression(ASubtractExpression node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutASubtractExpression(ASubtractExpression node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseASubtractExpression(ASubtractExpression node)
+    {
+        InASubtractExpression(node);
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        if(node.GetMinus() != null)
+        {
+            node.GetMinus().Apply(this);
+        }
+        if(node.GetExpression() != null)
+        {
+            node.GetExpression().Apply(this);
+        }
+        OutASubtractExpression(node);
+    }
+    public virtual void InAPassExpression(APassExpression node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAPassExpression(APassExpression node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAPassExpression(APassExpression node)
+    {
+        InAPassExpression(node);
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        OutAPassExpression(node);
+    }
+    public virtual void InAMultiplyExpression2(AMultiplyExpression2 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAMultiplyExpression2(AMultiplyExpression2 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAMultiplyExpression2(AMultiplyExpression2 node)
+    {
+        InAMultiplyExpression2(node);
+        if(node.GetExpression3() != null)
+        {
+            node.GetExpression3().Apply(this);
+        }
+        if(node.GetMult() != null)
+        {
+            node.GetMult().Apply(this);
+        }
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        OutAMultiplyExpression2(node);
+    }
+    public virtual void InADivideExpression2(ADivideExpression2 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutADivideExpression2(ADivideExpression2 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseADivideExpression2(ADivideExpression2 node)
+    {
+        InADivideExpression2(node);
+        if(node.GetExpression3() != null)
+        {
+            node.GetExpression3().Apply(this);
+        }
+        if(node.GetDiv() != null)
+        {
+            node.GetDiv().Apply(this);
+        }
+        if(node.GetExpression2() != null)
+        {
+            node.GetExpression2().Apply(this);
+        }
+        OutADivideExpression2(node);
+    }
+    public virtual void InAPassExpression2(APassExpression2 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAPassExpression2(APassExpression2 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAPassExpression2(APassExpression2 node)
+    {
+        InAPassExpression2(node);
+        if(node.GetExpression3() != null)
+        {
+            node.GetExpression3().Apply(this);
+        }
+        OutAPassExpression2(node);
+    }
+    public virtual void InANegativeExpression3(ANegativeExpression3 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutANegativeExpression3(ANegativeExpression3 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseANegativeExpression3(ANegativeExpression3 node)
+    {
+        InANegativeExpression3(node);
+        if(node.GetOperand() != null)
+        {
+            node.GetOperand().Apply(this);
+        }
+        if(node.GetNeg() != null)
+        {
+            node.GetNeg().Apply(this);
+        }
+        OutANegativeExpression3(node);
+    }
+    public virtual void InAPassExpression3(APassExpression3 node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAPassExpression3(APassExpression3 node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAPassExpression3(APassExpression3 node)
+    {
+        InAPassExpression3(node);
+        if(node.GetOperand() != null)
+        {
+            node.GetOperand().Apply(this);
+        }
+        OutAPassExpression3(node);
+    }
+    public virtual void InAIntOperand(AIntOperand node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAIntOperand(AIntOperand node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAIntOperand(AIntOperand node)
+    {
+        InAIntOperand(node);
+        if(node.GetInteger() != null)
+        {
+            node.GetInteger().Apply(this);
+        }
+        OutAIntOperand(node);
+    }
+    public virtual void InAFloatOperand(AFloatOperand node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAFloatOperand(AFloatOperand node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAFloatOperand(AFloatOperand node)
+    {
+        InAFloatOperand(node);
+        if(node.GetFloat() != null)
+        {
+            node.GetFloat().Apply(this);
+        }
+        OutAFloatOperand(node);
+    }
+    public virtual void InAStringOperand(AStringOperand node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAStringOperand(AStringOperand node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAStringOperand(AStringOperand node)
+    {
+        InAStringOperand(node);
+        if(node.GetStringLiteral() != null)
+        {
+            node.GetStringLiteral().Apply(this);
+        }
+        OutAStringOperand(node);
+    }
+    public virtual void InAVariableOperand(AVariableOperand node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAVariableOperand(AVariableOperand node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAVariableOperand(AVariableOperand node)
+    {
+        InAVariableOperand(node);
+        if(node.GetId() != null)
+        {
+            node.GetId().Apply(this);
+        }
+        OutAVariableOperand(node);
+    }
+    public virtual void InAIfConditionalStatement(AIfConditionalStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAIfConditionalStatement(AIfConditionalStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAIfConditionalStatement(AIfConditionalStatement node)
+    {
+        InAIfConditionalStatement(node);
+        if(node.GetElsePart() != null)
+        {
+            node.GetElsePart().Apply(this);
+        }
+        if(node.GetRBrace() != null)
+        {
+            node.GetRBrace().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetLBrace() != null)
+        {
+            node.GetLBrace().Apply(this);
+        }
+        if(node.GetRParen() != null)
+        {
+            node.GetRParen().Apply(this);
+        }
+        if(node.GetCondition() != null)
+        {
+            node.GetCondition().Apply(this);
+        }
+        if(node.GetLParen() != null)
+        {
+            node.GetLParen().Apply(this);
+        }
+        if(node.GetKwIf() != null)
+        {
+            node.GetKwIf().Apply(this);
+        }
+        OutAIfConditionalStatement(node);
+    }
+    public virtual void InAPresentElsePart(APresentElsePart node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAPresentElsePart(APresentElsePart node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAPresentElsePart(APresentElsePart node)
+    {
+        InAPresentElsePart(node);
+        if(node.GetRBrace() != null)
+        {
+            node.GetRBrace().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetLBrace() != null)
+        {
+            node.GetLBrace().Apply(this);
+        }
+        if(node.GetKwElse() != null)
+        {
+            node.GetKwElse().Apply(this);
+        }
+        OutAPresentElsePart(node);
+    }
+    public virtual void InAAbsentElsePart(AAbsentElsePart node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAAbsentElsePart(AAbsentElsePart node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAAbsentElsePart(AAbsentElsePart node)
+    {
+        InAAbsentElsePart(node);
+        OutAAbsentElsePart(node);
+    }
+    public virtual void InACondition(ACondition node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutACondition(ACondition node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseACondition(ACondition node)
+    {
+        InACondition(node);
+        if(node.GetRight() != null)
+        {
+            node.GetRight().Apply(this);
+        }
+        if(node.GetConditionalLogic() != null)
+        {
+            node.GetConditionalLogic().Apply(this);
+        }
+        if(node.GetLeft() != null)
+        {
+            node.GetLeft().Apply(this);
+        }
+        OutACondition(node);
+    }
+    public virtual void InAEqualConditionalLogic(AEqualConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAEqualConditionalLogic(AEqualConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAEqualConditionalLogic(AEqualConditionalLogic node)
+    {
+        InAEqualConditionalLogic(node);
+        if(node.GetEq() != null)
+        {
+            node.GetEq().Apply(this);
+        }
+        OutAEqualConditionalLogic(node);
+    }
+    public virtual void InAGreaterConditionalLogic(AGreaterConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAGreaterConditionalLogic(AGreaterConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAGreaterConditionalLogic(AGreaterConditionalLogic node)
+    {
+        InAGreaterConditionalLogic(node);
+        if(node.GetGt() != null)
+        {
+            node.GetGt().Apply(this);
+        }
+        OutAGreaterConditionalLogic(node);
+    }
+    public virtual void InAGreaterEqConditionalLogic(AGreaterEqConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAGreaterEqConditionalLogic(AGreaterEqConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAGreaterEqConditionalLogic(AGreaterEqConditionalLogic node)
+    {
+        InAGreaterEqConditionalLogic(node);
+        if(node.GetGte() != null)
+        {
+            node.GetGte().Apply(this);
+        }
+        OutAGreaterEqConditionalLogic(node);
+    }
+    public virtual void InALessConditionalLogic(ALessConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutALessConditionalLogic(ALessConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseALessConditionalLogic(ALessConditionalLogic node)
+    {
+        InALessConditionalLogic(node);
+        if(node.GetLt() != null)
+        {
+            node.GetLt().Apply(this);
+        }
+        OutALessConditionalLogic(node);
+    }
+    public virtual void InALessEqConditionalLogic(ALessEqConditionalLogic node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutALessEqConditionalLogic(ALessEqConditionalLogic node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseALessEqConditionalLogic(ALessEqConditionalLogic node)
+    {
+        InALessEqConditionalLogic(node);
+        if(node.GetLte() != null)
+        {
+            node.GetLte().Apply(this);
+        }
+        OutALessEqConditionalLogic(node);
+    }
+    public virtual void InAWhileLoopStatement(AWhileLoopStatement node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAWhileLoopStatement(AWhileLoopStatement node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAWhileLoopStatement(AWhileLoopStatement node)
+    {
+        InAWhileLoopStatement(node);
+        if(node.GetRBrace() != null)
+        {
+            node.GetRBrace().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetLBrace() != null)
+        {
+            node.GetLBrace().Apply(this);
+        }
+        if(node.GetRParen() != null)
+        {
+            node.GetRParen().Apply(this);
+        }
+        if(node.GetCondition() != null)
+        {
+            node.GetCondition().Apply(this);
+        }
+        if(node.GetLParen() != null)
+        {
+            node.GetLParen().Apply(this);
+        }
+        if(node.GetKwWhile() != null)
+        {
+            node.GetKwWhile().Apply(this);
+        }
+        OutAWhileLoopStatement(node);
+    }
+    public virtual void InAProcedureDefinition(AProcedureDefinition node)
+    {
+        DefaultIn(node);
+    }
+
+    public virtual void OutAProcedureDefinition(AProcedureDefinition node)
+    {
+        DefaultOut(node);
+    }
+
+    public override void CaseAProcedureDefinition(AProcedureDefinition node)
+    {
+        InAProcedureDefinition(node);
+        if(node.GetRBrace() != null)
+        {
+            node.GetRBrace().Apply(this);
+        }
+        if(node.GetStatements() != null)
+        {
+            node.GetStatements().Apply(this);
+        }
+        if(node.GetLBrace() != null)
+        {
+            node.GetLBrace().Apply(this);
+        }
+        if(node.GetRParen() != null)
+        {
+            node.GetRParen().Apply(this);
+        }
+        if(node.GetParameters() != null)
+        {
+            node.GetParameters().Apply(this);
+        }
+        if(node.GetLParen() != null)
+        {
+            node.GetLParen().Apply(this);
+        }
+        if(node.GetProcedureName() != null)
+        {
+            node.GetProcedureName().Apply(this);
+        }
+        OutAProcedureDefinition(node);
     }
 }
 } // namespace CS426.analysis

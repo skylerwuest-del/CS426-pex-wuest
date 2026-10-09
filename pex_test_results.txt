@@ -1,485 +1,1069 @@
 PEX TEST CASES (C1C Wuest) 
  
-INT (sevenup) ---------------------------------------------- 
+======================================== 
+PARSER TESTING                        
+======================================== 
  
-Correct Integer Datatype 
-Read token 'TKwInt', Text = [sevenup] at [1,1]
-Read token 'EOF', Text = [] at [1,8]
+ASSIGNMENTS ----------------------------------- 
  
-Incorrect Integer Datatype 
-Read token 'TId', Text = [seven] at [1,1]
-[1,6] Unknown token:  u
- 
- 
-Float (rootbeer) ---------------------------------------------- 
- 
-Correct Float Datatype 
-Read token 'TKwFloat', Text = [rootbeer] at [1,1]
-Read token 'EOF', Text = [] at [1,9]
- 
-Incorrect Float Datatype 
-Read token 'TId', Text = [root] at [1,1]
-[1,5] Unknown token:  b
- 
- 
-String (sprite) ---------------------------------------------- 
- 
-Correct String Datatype 
-Read token 'TKwStr', Text = [sprite] at [1,1]
-Read token 'EOF', Text = [] at [1,7]
- 
-Incorrect String Datatype 
-Read token 'TId', Text = [spritee] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,8]
-Read token 'TId', Text = [ssprite] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,8]
-Read token 'TId', Text = [SPRITE] at [3,1]
-Read token 'TBlank', Text = [
+INPUT: 
+variable dew 7*
+var1 dew 0.67*
+stringer dew "hello world"* 
+Correct Assignments 
 
-] at [3,7]
-Read token 'EOF', Text = [] at [5,1]
- 
- 
-Const (coke) ---------------------------------------------- 
- 
-Correct String Datatype 
-Read token 'TKwConst', Text = [coke] at [1,1]
-Read token 'EOF', Text = [] at [1,5]
- 
-Incorrect String Datatype 
-Read token 'TId', Text = [Coke] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,5]
-Read token 'TId', Text = [cokee] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,6]
-Read token 'TId', Text = [ccoke] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,6]
-Read token 'TId', Text = [coke1] at [4,1]
-Read token 'EOF', Text = [] at [4,6]
- 
- 
-IF (pepsi) ---------------------------------------------- 
- 
-Correct String Datatype 
-Read token 'TKwIf', Text = [pepsi] at [1,1]
-Read token 'EOF', Text = [] at [1,6]
- 
-Incorrect String Datatype 
-Read token 'TId', Text = [Pepsi] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,6]
-Read token 'TId', Text = [PEPSI] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,6]
-Read token 'TId', Text = [pepsI] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,6]
-Read token 'TId', Text = [ispep] at [4,1]
-Read token 'EOF', Text = [] at [4,6]
- 
- 
-ELSE (dietpepsi) ---------------------------------------------- 
- 
-Correct String Datatype 
-Read token 'TKwElse', Text = [dietpepsi] at [1,1]
-Read token 'EOF', Text = [] at [1,10]
- 
-Incorrect String Datatype 
-Read token 'TLt', Text = [diet] at [1,1]
-[1,5] Unknown token:  p
- 
- 
-WHILE (whelchs) ---------------------------------------------- 
- 
-Correct String Datatype 
-Read token 'TKwWhile', Text = [whelchs] at [1,1]
-Read token 'EOF', Text = [] at [1,8]
- 
-Incorrect String Datatype 
-Read token 'TId', Text = [whelch] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,7]
-Read token 'TId', Text = [whelch] at [2,1]
-[2,7] Unknown token: '
- 
- 
-MAIN (carbonation) ---------------------------------------------- 
- 
-Correct String Datatype 
-Read token 'TKwMain', Text = [carbonation] at [1,1]
-Read token 'EOF', Text = [] at [1,12]
- 
-Incorrect String Datatype 
-Read token 'TId', Text = [carb] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,5]
-Read token 'TId', Text = [carbonationn] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,13]
-Read token 'TId', Text = [CARBonation] at [3,1]
-[3,12] Unknown token:  
- 
- 
-RETURN (rc) ---------------------------------------------- 
- 
-Correct Return Keyword 
-Read token 'TKwReturn', Text = [rc] at [1,1]
-Read token 'EOF', Text = [] at [1,3]
- 
-Incorrect Return Keyword 
-Read token 'TId', Text = [RC] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,3]
-Read token 'TId', Text = [r] at [2,1]
-[2,2] Unknown token:  c
- 
- 
-BRACES (carbonating / carbonated) ------------------------- 
- 
-Correct Braces Token 
-Read token 'TLBrace', Text = [carbonating] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,12]
-Read token 'TRBrace', Text = [carbonated] at [2,1]
-Read token 'EOF', Text = [] at [2,11]
- 
-Incorrect Braces Token 
-Read token 'TKwMain', Text = [carbonation] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,12]
-Read token 'TId', Text = [carbonatin] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,11]
-Read token 'TId', Text = [carbonate] at [3,1]
-Read token 'EOF', Text = [] at [3,10]
- 
-STRING LITERALS ------------------------------------------ 
- 
-Correct String Literal 
-Read token 'TInteger', Text = [0] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,2]
-Read token 'TInteger', Text = [12376] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,6]
-Read token 'TInteger', Text = [1] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,2]
-Read token 'TInteger', Text = [999] at [4,1]
-Read token 'TBlank', Text = [
-] at [4,4]
-Read token 'TInteger', Text = [10] at [5,1]
-Read token 'TBlank', Text = [
+- AProgram
+     `- AMultipleStatements
+        |- AAssignmentStatement
+        |  `- AAssignStatement
+        |     |- variable
+        |     |- dew
+        |     |- APassExpression
+        |     |  `- APassExpression2
+        |     |     `- APassExpression3
+        |     |        `- AIntOperand
+        |     |           `- 7
+        |     `- *
+        `- AMultipleStatements
+           |- AAssignmentStatement
+           |  `- AAssignStatement
+           |     |- var1
+           |     |- dew
+           |     |- APassExpression
+           |     |  `- APassExpression2
+           |     |     `- APassExpression3
+           |     |        `- AFloatOperand
+           |     |           `- 0.67
+           |     `- *
+           `- AMultipleStatements
+              `- AAssignmentStatement
+              |  `- AAssignStatement
+              |     |- stringer
+              |     |- dew
+              |     |- APassExpression
+              |     |  `- APassExpression2
+              |     |     `- APassExpression3
+              |     |        `- AStringOperand
+              |     |           `- "hello world"
+              |     `- *
+              `- ASingleStatements
 
-] at [5,3]
-Read token 'TFloat', Text = [0.5] at [7,1]
-Read token 'TBlank', Text = [
-] at [7,4]
-Read token 'TFloat', Text = [0.005] at [8,1]
-Read token 'TBlank', Text = [
-] at [8,6]
-Read token 'TFloat', Text = [3.14152965] at [9,1]
-Read token 'TBlank', Text = [
-] at [9,11]
-Read token 'TFloat', Text = [3.0e+10] at [10,1]
-Read token 'TBlank', Text = [
-] at [10,8]
-Read token 'TFloat', Text = [3.00E-100] at [11,1]
-Read token 'TBlank', Text = [
+ 
+INPUT: 
+variable dew* 
+variable 7* 
+variable dew 7 
+ 
+Incorrect Assignments 
+[1,13] expecting: integer, float, string literal, '-', id
+[1,10] expecting: 'dew', 'bottle'
+[1,15] expecting: '*', 'a&w', 'sundrop'
+ 
+ 
+CALLS ----------------------------------- 
+ 
+INPUT: 
+function bottle parameter cap*
+foo bottle 7, 6.7, "hello" cap*
+foo bottle 7 cap*
+foo bottle 6.7 cap*
+foo bottle "H" cap*
+foo bottle cap* 
+Correct Calls 
 
-] at [11,10]
-Read token 'TStringLiteral', Text = ["$""] at [13,1]
-Read token 'TBlank', Text = [
-] at [13,5]
-Read token 'TStringLiteral', Text = ["$'"] at [14,1]
-Read token 'TBlank', Text = [
-] at [14,5]
-Read token 'TStringLiteral', Text = ["$$"] at [15,1]
-Read token 'TBlank', Text = [
-] at [15,5]
-Read token 'EOF', Text = [] at [16,1]
- 
-Incorrect String Literal 
-Read token 'TInteger', Text = [0] at [1,1]
-Read token 'TInteger', Text = [0] at [1,2]
-Read token 'TInteger', Text = [0] at [1,3]
-Read token 'TInteger', Text = [0] at [1,4]
-Read token 'TInteger', Text = [0] at [1,5]
-Read token 'TInteger', Text = [0] at [1,6]
-Read token 'TInteger', Text = [0] at [1,7]
-Read token 'TInteger', Text = [0] at [1,8]
-Read token 'TInteger', Text = [0] at [1,9]
-Read token 'TInteger', Text = [0] at [1,10]
-Read token 'TInteger', Text = [0] at [1,11]
-Read token 'TInteger', Text = [0] at [1,12]
-Read token 'TInteger', Text = [0] at [1,13]
-Read token 'TInteger', Text = [0] at [1,14]
-Read token 'TBlank', Text = [
-] at [1,15]
-Read token 'TInteger', Text = [0] at [2,1]
-Read token 'TId', Text = [a] at [2,2]
-Read token 'TBlank', Text = [
+- AProgram
+     `- AMultipleStatements
+        |- ACallStatement
+        |  `- AFunctionCallStatement
+        |     |- function
+        |     |- bottle
+        |     |- ASomeParameters
+        |     |  `- AOneExpressions
+        |     |     `- APassExpression
+        |     |        `- APassExpression2
+        |     |           `- APassExpression3
+        |     |              `- AVariableOperand
+        |     |                 `- parameter
+        |     |- cap
+        |     `- *
+        `- AMultipleStatements
+           |- ACallStatement
+           |  `- AFunctionCallStatement
+           |     |- foo
+           |     |- bottle
+           |     |- ASomeParameters
+           |     |  `- AManyExpressions
+           |     |     |- APassExpression
+           |     |     |  `- APassExpression2
+           |     |     |     `- APassExpression3
+           |     |     |        `- AIntOperand
+           |     |     |           `- 7
+           |     |     |- ,
+           |     |     `- AManyExpressions
+           |     |        |- APassExpression
+           |     |        |  `- APassExpression2
+           |     |        |     `- APassExpression3
+           |     |        |        `- AFloatOperand
+           |     |        |           `- 6.7
+           |     |        |- ,
+           |     |        `- AOneExpressions
+           |     |           `- APassExpression
+           |     |              `- APassExpression2
+           |     |                 `- APassExpression3
+           |     |                    `- AStringOperand
+           |     |                       `- "hello"
+           |     |- cap
+           |     `- *
+           `- AMultipleStatements
+              |- ACallStatement
+              |  `- AFunctionCallStatement
+              |     |- foo
+              |     |- bottle
+              |     |- ASomeParameters
+              |     |  `- AOneExpressions
+              |     |     `- APassExpression
+              |     |        `- APassExpression2
+              |     |           `- APassExpression3
+              |     |              `- AIntOperand
+              |     |                 `- 7
+              |     |- cap
+              |     `- *
+              `- AMultipleStatements
+                 |- ACallStatement
+                 |  `- AFunctionCallStatement
+                 |     |- foo
+                 |     |- bottle
+                 |     |- ASomeParameters
+                 |     |  `- AOneExpressions
+                 |     |     `- APassExpression
+                 |     |        `- APassExpression2
+                 |     |           `- APassExpression3
+                 |     |              `- AFloatOperand
+                 |     |                 `- 6.7
+                 |     |- cap
+                 |     `- *
+                 `- AMultipleStatements
+                    |- ACallStatement
+                    |  `- AFunctionCallStatement
+                    |     |- foo
+                    |     |- bottle
+                    |     |- ASomeParameters
+                    |     |  `- AOneExpressions
+                    |     |     `- APassExpression
+                    |     |        `- APassExpression2
+                    |     |           `- APassExpression3
+                    |     |              `- AStringOperand
+                    |     |                 `- "H"
+                    |     |- cap
+                    |     `- *
+                    `- AMultipleStatements
+                       `- ACallStatement
+                       |  `- AFunctionCallStatement
+                       |     |- foo
+                       |     `- bottle
+                       |     |- AEmptyParameters
+                       |     |- cap
+                       |     `- *
+                       `- ASingleStatements
 
-] at [2,3]
-Read token 'TFloat', Text = [0231000000.01234] at [4,1]
-Read token 'TBlank', Text = [
-] at [4,17]
-Read token 'TFloat', Text = [0.005] at [5,1]
-Read token 'TId', Text = [e3782719739] at [5,6]
-Read token 'TBlank', Text = [
-] at [5,17]
-Read token 'TFloat', Text = [3.14152965] at [6,1]
-Read token 'TId', Text = [ee] at [6,11]
-Read token 'TBlank', Text = [
-] at [6,13]
-Read token 'TFloat', Text = [3.0] at [7,1]
-Read token 'TId', Text = [e10] at [7,4]
-Read token 'TBlank', Text = [
-] at [7,7]
-Read token 'TFloat', Text = [300.00] at [8,1]
-Read token 'TId', Text = [E] at [8,7]
-Read token 'TNeg', Text = [-] at [8,8]
-Read token 'TInteger', Text = [100] at [8,9]
-Read token 'TBlank', Text = [
+ 
+INPUT: 
+function bottle parameter bottle*
+ 
+function bottle sevenup cap* 
+bottle cap* 
+ 
+Incorrect Calls 
+[1,27] expecting: 'cap'
+[1,17] expecting: 'cap'
+[1,1] expecting: EOF
+ 
+ 
+CONDITIONALS ----------------------------------- 
+ 
+INPUT: 
+pepsi bottle score squirt 5 cap carbonating
+    result dew 1*
+carbonated
 
-] at [8,12]
-[10,1] Unknown token: $
+pepsi bottle score sugar 5 cap carbonating
+    result dew 2*
+carbonated dietpepsi carbonating
+    result dew 0*
+carbonated
+
+pepsi bottle score caffeine 5 cap carbonating
+    result dew 3*
+    message dew "at least five"*
+carbonated
+
+pepsi bottle score diet 10 cap carbonating
+    result dew 4*
+carbonated
+
+pepsi bottle score zero 10 cap carbonating
+    result dew 5*
+carbonated dietpepsi carbonating
+    result dew 6*
+carbonated
+
+pepsi bottle score sugar 0 cap carbonating
+    pepsi bottle score diet 10 cap carbonating
+        result dew 7*
+    carbonated dietpepsi carbonating
+        result dew 8*
+    carbonated
+carbonated dietpepsi carbonating
+    result dew 0*
+carbonated 
+Correct Conditionals 
+
+- AProgram
+     `- AMultipleStatements
+        |- AConditionalStatement
+        |  `- AIfConditionalStatement
+        |     |- pepsi
+        |     |- bottle
+        |     |- ACondition
+        |     |  |- AVariableOperand
+        |     |  |  `- score
+        |     |  |- AEqualConditionalLogic
+        |     |  |  `- squirt
+        |     |  `- AIntOperand
+        |     |     `- 5
+        |     |- cap
+        |     |- carbonating
+        |     |- AMultipleStatements
+        |     |  `- AAssignmentStatement
+        |     |  |  `- AAssignStatement
+        |     |  |     |- result
+        |     |  |     |- dew
+        |     |  |     |- APassExpression
+        |     |  |     |  `- APassExpression2
+        |     |  |     |     `- APassExpression3
+        |     |  |     |        `- AIntOperand
+        |     |  |     |           `- 1
+        |     |  |     `- *
+        |     |  `- ASingleStatements
+        |     `- carbonated
+        |     `- AAbsentElsePart
+        `- AMultipleStatements
+           |- AConditionalStatement
+           |  `- AIfConditionalStatement
+           |     |- pepsi
+           |     |- bottle
+           |     |- ACondition
+           |     |  |- AVariableOperand
+           |     |  |  `- score
+           |     |  |- AGreaterConditionalLogic
+           |     |  |  `- sugar
+           |     |  `- AIntOperand
+           |     |     `- 5
+           |     |- cap
+           |     |- carbonating
+           |     |- AMultipleStatements
+           |     |  `- AAssignmentStatement
+           |     |  |  `- AAssignStatement
+           |     |  |     |- result
+           |     |  |     |- dew
+           |     |  |     |- APassExpression
+           |     |  |     |  `- APassExpression2
+           |     |  |     |     `- APassExpression3
+           |     |  |     |        `- AIntOperand
+           |     |  |     |           `- 2
+           |     |  |     `- *
+           |     |  `- ASingleStatements
+           |     |- carbonated
+           |     `- APresentElsePart
+           |        |- dietpepsi
+           |        |- carbonating
+           |        |- AMultipleStatements
+           |        |  `- AAssignmentStatement
+           |        |  |  `- AAssignStatement
+           |        |  |     |- result
+           |        |  |     |- dew
+           |        |  |     |- APassExpression
+           |        |  |     |  `- APassExpression2
+           |        |  |     |     `- APassExpression3
+           |        |  |     |        `- AIntOperand
+           |        |  |     |           `- 0
+           |        |  |     `- *
+           |        |  `- ASingleStatements
+           |        `- carbonated
+           `- AMultipleStatements
+              |- AConditionalStatement
+              |  `- AIfConditionalStatement
+              |     |- pepsi
+              |     |- bottle
+              |     |- ACondition
+              |     |  |- AVariableOperand
+              |     |  |  `- score
+              |     |  |- AGreaterEqConditionalLogic
+              |     |  |  `- caffeine
+              |     |  `- AIntOperand
+              |     |     `- 5
+              |     |- cap
+              |     |- carbonating
+              |     |- AMultipleStatements
+              |     |  |- AAssignmentStatement
+              |     |  |  `- AAssignStatement
+              |     |  |     |- result
+              |     |  |     |- dew
+              |     |  |     |- APassExpression
+              |     |  |     |  `- APassExpression2
+              |     |  |     |     `- APassExpression3
+              |     |  |     |        `- AIntOperand
+              |     |  |     |           `- 3
+              |     |  |     `- *
+              |     |  `- AMultipleStatements
+              |     |     `- AAssignmentStatement
+              |     |     |  `- AAssignStatement
+              |     |     |     |- message
+              |     |     |     |- dew
+              |     |     |     |- APassExpression
+              |     |     |     |  `- APassExpression2
+              |     |     |     |     `- APassExpression3
+              |     |     |     |        `- AStringOperand
+              |     |     |     |           `- "at least five"
+              |     |     |     `- *
+              |     |     `- ASingleStatements
+              |     `- carbonated
+              |     `- AAbsentElsePart
+              `- AMultipleStatements
+                 |- AConditionalStatement
+                 |  `- AIfConditionalStatement
+                 |     |- pepsi
+                 |     |- bottle
+                 |     |- ACondition
+                 |     |  |- AVariableOperand
+                 |     |  |  `- score
+                 |     |  |- ALessConditionalLogic
+                 |     |  |  `- diet
+                 |     |  `- AIntOperand
+                 |     |     `- 10
+                 |     |- cap
+                 |     |- carbonating
+                 |     |- AMultipleStatements
+                 |     |  `- AAssignmentStatement
+                 |     |  |  `- AAssignStatement
+                 |     |  |     |- result
+                 |     |  |     |- dew
+                 |     |  |     |- APassExpression
+                 |     |  |     |  `- APassExpression2
+                 |     |  |     |     `- APassExpression3
+                 |     |  |     |        `- AIntOperand
+                 |     |  |     |           `- 4
+                 |     |  |     `- *
+                 |     |  `- ASingleStatements
+                 |     `- carbonated
+                 |     `- AAbsentElsePart
+                 `- AMultipleStatements
+                    |- AConditionalStatement
+                    |  `- AIfConditionalStatement
+                    |     |- pepsi
+                    |     |- bottle
+                    |     |- ACondition
+                    |     |  |- AVariableOperand
+                    |     |  |  `- score
+                    |     |  |- ALessEqConditionalLogic
+                    |     |  |  `- zero
+                    |     |  `- AIntOperand
+                    |     |     `- 10
+                    |     |- cap
+                    |     |- carbonating
+                    |     |- AMultipleStatements
+                    |     |  `- AAssignmentStatement
+                    |     |  |  `- AAssignStatement
+                    |     |  |     |- result
+                    |     |  |     |- dew
+                    |     |  |     |- APassExpression
+                    |     |  |     |  `- APassExpression2
+                    |     |  |     |     `- APassExpression3
+                    |     |  |     |        `- AIntOperand
+                    |     |  |     |           `- 5
+                    |     |  |     `- *
+                    |     |  `- ASingleStatements
+                    |     |- carbonated
+                    |     `- APresentElsePart
+                    |        |- dietpepsi
+                    |        |- carbonating
+                    |        |- AMultipleStatements
+                    |        |  `- AAssignmentStatement
+                    |        |  |  `- AAssignStatement
+                    |        |  |     |- result
+                    |        |  |     |- dew
+                    |        |  |     |- APassExpression
+                    |        |  |     |  `- APassExpression2
+                    |        |  |     |     `- APassExpression3
+                    |        |  |     |        `- AIntOperand
+                    |        |  |     |           `- 6
+                    |        |  |     `- *
+                    |        |  `- ASingleStatements
+                    |        `- carbonated
+                    `- AMultipleStatements
+                       `- AConditionalStatement
+                       |  `- AIfConditionalStatement
+                       |     |- pepsi
+                       |     |- bottle
+                       |     |- ACondition
+                       |     |  |- AVariableOperand
+                       |     |  |  `- score
+                       |     |  |- AGreaterConditionalLogic
+                       |     |  |  `- sugar
+                       |     |  `- AIntOperand
+                       |     |     `- 0
+                       |     |- cap
+                       |     |- carbonating
+                       |     |- AMultipleStatements
+                       |     |  `- AConditionalStatement
+                       |     |  |  `- AIfConditionalStatement
+                       |     |  |     |- pepsi
+                       |     |  |     |- bottle
+                       |     |  |     |- ACondition
+                       |     |  |     |  |- AVariableOperand
+                       |     |  |     |  |  `- score
+                       |     |  |     |  |- ALessConditionalLogic
+                       |     |  |     |  |  `- diet
+                       |     |  |     |  `- AIntOperand
+                       |     |  |     |     `- 10
+                       |     |  |     |- cap
+                       |     |  |     |- carbonating
+                       |     |  |     |- AMultipleStatements
+                       |     |  |     |  `- AAssignmentStatement
+                       |     |  |     |  |  `- AAssignStatement
+                       |     |  |     |  |     |- result
+                       |     |  |     |  |     |- dew
+                       |     |  |     |  |     |- APassExpression
+                       |     |  |     |  |     |  `- APassExpression2
+                       |     |  |     |  |     |     `- APassExpression3
+                       |     |  |     |  |     |        `- AIntOperand
+                       |     |  |     |  |     |           `- 7
+                       |     |  |     |  |     `- *
+                       |     |  |     |  `- ASingleStatements
+                       |     |  |     |- carbonated
+                       |     |  |     `- APresentElsePart
+                       |     |  |        |- dietpepsi
+                       |     |  |        |- carbonating
+                       |     |  |        |- AMultipleStatements
+                       |     |  |        |  `- AAssignmentStatement
+                       |     |  |        |  |  `- AAssignStatement
+                       |     |  |        |  |     |- result
+                       |     |  |        |  |     |- dew
+                       |     |  |        |  |     |- APassExpression
+                       |     |  |        |  |     |  `- APassExpression2
+                       |     |  |        |  |     |     `- APassExpression3
+                       |     |  |        |  |     |        `- AIntOperand
+                       |     |  |        |  |     |           `- 8
+                       |     |  |        |  |     `- *
+                       |     |  |        |  `- ASingleStatements
+                       |     |  |        `- carbonated
+                       |     |  `- ASingleStatements
+                       |     |- carbonated
+                       |     `- APresentElsePart
+                       |        |- dietpepsi
+                       |        |- carbonating
+                       |        |- AMultipleStatements
+                       |        |  `- AAssignmentStatement
+                       |        |  |  `- AAssignStatement
+                       |        |  |     |- result
+                       |        |  |     |- dew
+                       |        |  |     |- APassExpression
+                       |        |  |     |  `- APassExpression2
+                       |        |  |     |     `- APassExpression3
+                       |        |  |     |        `- AIntOperand
+                       |        |  |     |           `- 0
+                       |        |  |     `- *
+                       |        |  `- ASingleStatements
+                       |        `- carbonated
+                       `- ASingleStatements
+
+ 
+INPUT: 
+pepsi bottle score sugar cap carbonating
+    result dew 1*
+carbonated 
+pepsi bottle score sugar 5 carbonating
+    result dew 1*
+carbonated 
+dietpepsi carbonating
+    result dew 0*
+carbonated 
+ 
+Incorrect Conditionals 
+[1,26] expecting: integer, float, string literal, id
+[1,28] expecting: 'cap'
+[1,1] expecting: EOF
  
  
-END OF LINE (*) ------------------------------------------ 
+VARIABLE DECLARATIONS ----------------------------------- 
  
-Correct EOL Token 
-Read token 'TEol', Text = [*] at [1,1]
-Read token 'EOF', Text = [] at [1,2]
+INPUT: 
+sevenup score*
+rootbeer temperature*
+sprite message*
+sevenup item_count*
+rootbeer rate2*
+sprite greeting* 
+Correct Variable Declarations 
+
+- AProgram
+     `- AMultipleStatements
+        |- ADeclarationStatement
+        |  `- ADeclareStatement
+        |     |- AIntType
+        |     |  `- sevenup
+        |     |- score
+        |     `- *
+        `- AMultipleStatements
+           |- ADeclarationStatement
+           |  `- ADeclareStatement
+           |     |- AFloatType
+           |     |  `- rootbeer
+           |     |- temperature
+           |     `- *
+           `- AMultipleStatements
+              |- ADeclarationStatement
+              |  `- ADeclareStatement
+              |     |- AStringType
+              |     |  `- sprite
+              |     |- message
+              |     `- *
+              `- AMultipleStatements
+                 |- ADeclarationStatement
+                 |  `- ADeclareStatement
+                 |     |- AIntType
+                 |     |  `- sevenup
+                 |     |- item_count
+                 |     `- *
+                 `- AMultipleStatements
+                    |- ADeclarationStatement
+                    |  `- ADeclareStatement
+                    |     |- AFloatType
+                    |     |  `- rootbeer
+                    |     |- rate2
+                    |     `- *
+                    `- AMultipleStatements
+                       `- ADeclarationStatement
+                       |  `- ADeclareStatement
+                       |     |- AStringType
+                       |     |  `- sprite
+                       |     |- greeting
+                       |     `- *
+                       `- ASingleStatements
+
  
-Incorrect EOL Token 
-Read token 'TEol', Text = [*] at [1,1]
-Read token 'TEol', Text = [*] at [1,2]
-Read token 'TBlank', Text = [
-] at [1,3]
-[2,1] Unknown token: ;
+INPUT: 
+sevenup * 
+score* 
+sprite message 
  
- 
-ASSIGNMENT (dew) ----------------------------------------- 
- 
-Correct Assign Operator 
-Read token 'TAssign', Text = [dew] at [1,1]
-Read token 'EOF', Text = [] at [1,4]
- 
-Incorrect Assign Operator 
-Read token 'TId', Text = [DEW] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,4]
-Read token 'TId', Text = [deww] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,5]
-Read token 'TId', Text = [dewdew] at [3,1]
-Read token 'EOF', Text = [] at [3,7]
- 
- 
-PLUS and MINUS (sundrop) ------------------------- 
- 
-Correct Plus Operator 
-Read token 'TPlus', Text = [a&w] at [1,1]
-Read token 'EOF', Text = [] at [1,4]
- 
-Incorrect Plus Operator 
-Read token 'TId', Text = [aw] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,3]
-Read token 'TId', Text = [A] at [2,1]
-[2,2] Unknown token: &
- 
-Correct Minus Operator 
-Read token 'TMinus', Text = [sundrop] at [1,1]
-Read token 'EOF', Text = [] at [1,8]
- 
-Incorrect Minus Operator 
-Read token 'TId', Text = [sun] at [1,1]
-[1,4] Unknown token:  d
- 
-Correct Negation Operator (-) 
-Read token 'TNeg', Text = [-] at [1,1]
-Read token 'EOF', Text = [] at [1,2]
- 
-Incorrect Negation Operator (-) 
-Read token 'TNeg', Text = [-] at [1,1]
-Read token 'TNeg', Text = [-] at [1,2]
-Read token 'TInteger', Text = [67] at [1,3]
-Read token 'TBlank', Text = [
-] at [1,5]
-Read token 'TId', Text = [minus] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,6]
-Read token 'EOF', Text = [] at [3,1]
- 
- 
-MULTIPLY (mug) and DIVIDE (drpepper) ------------------- 
- 
-Correct Multiply Operator 
-Read token 'TMult', Text = [mug] at [1,1]
-Read token 'EOF', Text = [] at [1,4]
- 
-Incorrect Multiply Operator 
-Read token 'TEol', Text = [*] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,2]
-Read token 'TId', Text = [x] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,2]
-Read token 'TId', Text = [MUG] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,4]
-Read token 'EOF', Text = [] at [4,1]
- 
-Correct Divide Operator 
-Read token 'TDiv', Text = [drpepper] at [1,1]
-Read token 'EOF', Text = [] at [1,9]
- 
-Incorrect Divide Operator 
-Read token 'TId', Text = [DRPEPPER] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,9]
-[2,1] Unknown token: /
+Incorrect Variable Declarations 
+[1,9] expecting: id
+[1,6] expecting: 'dew', 'bottle'
+[1,15] expecting: '*'
  
  
-PARENTHESES (bottle / cap) ------------------------------- 
+CONSTANT DECLARATIONS ----------------------------------- 
  
-Correct Parentheses Token 
-Read token 'TLParen', Text = [bottle] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,7]
-Read token 'TRParen', Text = [cap] at [2,1]
-Read token 'EOF', Text = [] at [2,4]
+INPUT: 
+coke sevenup max_score dew 100*
+coke sevenup min_score dew -5*
+coke sevenup zero_value dew 0*
+coke rootbeer rate dew 0.75*
+coke rootbeer low_temperature dew -6.7*
+coke rootbeer tiny_value dew 5.2e-4*
+coke sprite greeting dew "hello world"*
+coke sprite empty_message dew ""* 
+Correct Constant Declarations 
+
+- AProgram
+     `- AMultipleStatements
+        |- AConstantStatement
+        |  `- AConstantDeclareConstStatement
+        |     |- coke
+        |     |- AConstIntConstType
+        |     |  |- sevenup
+        |     |  |- max_score
+        |     |  |- dew
+        |     |  `- 100
+        |     `- *
+        `- AMultipleStatements
+           |- AConstantStatement
+           |  `- AConstantDeclareConstStatement
+           |     |- coke
+           |     |- AConstIntConstType
+           |     |  |- sevenup
+           |     |  |- min_score
+           |     |  |- dew
+           |     |  |- -
+           |     |  `- 5
+           |     `- *
+           `- AMultipleStatements
+              |- AConstantStatement
+              |  `- AConstantDeclareConstStatement
+              |     |- coke
+              |     |- AConstIntConstType
+              |     |  |- sevenup
+              |     |  |- zero_value
+              |     |  |- dew
+              |     |  `- 0
+              |     `- *
+              `- AMultipleStatements
+                 |- AConstantStatement
+                 |  `- AConstantDeclareConstStatement
+                 |     |- coke
+                 |     |- AConstFloatConstType
+                 |     |  |- rootbeer
+                 |     |  |- rate
+                 |     |  |- dew
+                 |     |  `- 0.75
+                 |     `- *
+                 `- AMultipleStatements
+                    |- AConstantStatement
+                    |  `- AConstantDeclareConstStatement
+                    |     |- coke
+                    |     |- AConstFloatConstType
+                    |     |  |- rootbeer
+                    |     |  |- low_temperature
+                    |     |  |- dew
+                    |     |  |- -
+                    |     |  `- 6.7
+                    |     `- *
+                    `- AMultipleStatements
+                       |- AConstantStatement
+                       |  `- AConstantDeclareConstStatement
+                       |     |- coke
+                       |     |- AConstFloatConstType
+                       |     |  |- rootbeer
+                       |     |  |- tiny_value
+                       |     |  |- dew
+                       |     |  `- 5.2e-4
+                       |     `- *
+                       `- AMultipleStatements
+                          |- AConstantStatement
+                          |  `- AConstantDeclareConstStatement
+                          |     |- coke
+                          |     |- AConstStringConstType
+                          |     |  |- sprite
+                          |     |  |- greeting
+                          |     |  |- dew
+                          |     |  `- "hello world"
+                          |     `- *
+                          `- AMultipleStatements
+                             `- AConstantStatement
+                             |  `- AConstantDeclareConstStatement
+                             |     |- coke
+                             |     |- AConstStringConstType
+                             |     |  |- sprite
+                             |     |  |- empty_message
+                             |     |  |- dew
+                             |     |  `- ""
+                             |     `- *
+                             `- ASingleStatements
+
  
-Incorrect Parentheses Token 
-[1,1] Unknown token: (
+INPUT: 
+coke sevenup max_score* 
+coke rootbeer dew 0.75* 
+coke sprite greeting "hello world"* 
+ 
+Incorrect Constant Declarations 
+[1,23] expecting: 'dew'
+[1,15] expecting: id
+[1,22] expecting: 'dew'
  
  
-LOGICAL OPERATORS (jolt / zevia / coffee) ---------------- 
+PROCEDURE DEFINITIONS ----------------------------------- 
  
-Correct Logical Operators (AND, OR, NOT) 
-Read token 'TAndOp', Text = [jolt] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,5]
-Read token 'TOrOp', Text = [zevia] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,6]
-Read token 'TNotOp', Text = [coffee] at [3,1]
-Read token 'EOF', Text = [] at [3,7]
+INPUT: 
+greet bottle cap carbonating
+    sprite message*
+    message dew "hello"*
+carbonated
+
+show_count bottle sevenup count cap carbonating
+    count dew count a&w 1*
+carbonated
+
+update bottle sevenup count, rootbeer rate, sprite message cap carbonating
+    count dew count a&w 1*
+    rate dew rate mug 2.0*
+    message dew "updated"*
+carbonated
+
+carbonation bottle cap carbonating
+    greet bottle cap*
+    show_count bottle 7 cap*
+    update bottle 7, 0.75, "hello" cap*
+carbonated 
+Correct Procedure Definitions 
+[1,18] expecting: '*'
  
-Incorrect Logical Operators (AND, OR, NOT) 
-Read token 'TId', Text = [AND] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,4]
-Read token 'TId', Text = [OR] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,3]
-Read token 'TId', Text = [NOT] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,4]
-[4,1] Unknown token: &
+INPUT: 
+show_count bottle count cap carbonating
+    count dew 1*
+carbonated
+
+carbonation bottle cap carbonating
+    sevenup result*
+carbonated 
+show_count bottle sevenup cap carbonating
+    sevenup result*
+carbonated
+
+carbonation bottle cap carbonating
+    sevenup result*
+carbonated 
+update bottle sevenup count rootbeer rate cap carbonating
+    count dew 1*
+carbonated
+
+carbonation bottle cap carbonating
+    sevenup result*
+carbonated 
+ 
+Incorrect Procedure Definitions 
+[1,29] expecting: '*'
+[1,19] expecting: 'cap'
+[1,15] expecting: 'cap'
  
  
-COMPARISON OPERATORS (squirt, sugar, caffeine, diet, zero) - 
+LOOPS ----------------------------------- 
  
-Correct Comparison Operators 
-Read token 'TEq', Text = [squirt] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,7]
-Read token 'TGt', Text = [sugar] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,6]
-Read token 'TGte', Text = [caffeine] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,9]
-Read token 'TLt', Text = [diet] at [4,1]
-Read token 'TBlank', Text = [
-] at [4,5]
-Read token 'TLte', Text = [zero] at [5,1]
-Read token 'EOF', Text = [] at [5,5]
+INPUT: 
+whelchs bottle count diet 5 cap carbonating
+    count dew count a&w 1*
+carbonated
+
+whelchs bottle score zero 10 cap carbonating
+    score dew score a&w 1*
+    message dew "looping"*
+carbonated
+
+whelchs bottle outer diet 3 cap carbonating
+    inner dew 0*
+    whelchs bottle inner diet 2 cap carbonating
+        inner dew inner a&w 1*
+    carbonated
+    outer dew outer a&w 1*
+carbonated
+
+whelchs bottle count diet 10 cap carbonating
+    pepsi bottle count squirt 5 cap carbonating
+        message dew "halfway"*
+    carbonated dietpepsi carbonating
+        message dew "continuing"*
+    carbonated
+    count dew count a&w 1*
+carbonated 
+Correct Loops 
+
+- AProgram
+     `- AMultipleStatements
+        |- ALoopStatement
+        |  `- AWhileLoopStatement
+        |     |- whelchs
+        |     |- bottle
+        |     |- ACondition
+        |     |  |- AVariableOperand
+        |     |  |  `- count
+        |     |  |- ALessConditionalLogic
+        |     |  |  `- diet
+        |     |  `- AIntOperand
+        |     |     `- 5
+        |     |- cap
+        |     |- carbonating
+        |     |- AMultipleStatements
+        |     |  `- AAssignmentStatement
+        |     |  |  `- AAssignStatement
+        |     |  |     |- count
+        |     |  |     |- dew
+        |     |  |     |- AAddExpression
+        |     |  |     |  |- APassExpression
+        |     |  |     |  |  `- APassExpression2
+        |     |  |     |  |     `- APassExpression3
+        |     |  |     |  |        `- AVariableOperand
+        |     |  |     |  |           `- count
+        |     |  |     |  |- a&w
+        |     |  |     |  `- APassExpression2
+        |     |  |     |     `- APassExpression3
+        |     |  |     |        `- AIntOperand
+        |     |  |     |           `- 1
+        |     |  |     `- *
+        |     |  `- ASingleStatements
+        |     `- carbonated
+        `- AMultipleStatements
+           |- ALoopStatement
+           |  `- AWhileLoopStatement
+           |     |- whelchs
+           |     |- bottle
+           |     |- ACondition
+           |     |  |- AVariableOperand
+           |     |  |  `- score
+           |     |  |- ALessEqConditionalLogic
+           |     |  |  `- zero
+           |     |  `- AIntOperand
+           |     |     `- 10
+           |     |- cap
+           |     |- carbonating
+           |     |- AMultipleStatements
+           |     |  |- AAssignmentStatement
+           |     |  |  `- AAssignStatement
+           |     |  |     |- score
+           |     |  |     |- dew
+           |     |  |     |- AAddExpression
+           |     |  |     |  |- APassExpression
+           |     |  |     |  |  `- APassExpression2
+           |     |  |     |  |     `- APassExpression3
+           |     |  |     |  |        `- AVariableOperand
+           |     |  |     |  |           `- score
+           |     |  |     |  |- a&w
+           |     |  |     |  `- APassExpression2
+           |     |  |     |     `- APassExpression3
+           |     |  |     |        `- AIntOperand
+           |     |  |     |           `- 1
+           |     |  |     `- *
+           |     |  `- AMultipleStatements
+           |     |     `- AAssignmentStatement
+           |     |     |  `- AAssignStatement
+           |     |     |     |- message
+           |     |     |     |- dew
+           |     |     |     |- APassExpression
+           |     |     |     |  `- APassExpression2
+           |     |     |     |     `- APassExpression3
+           |     |     |     |        `- AStringOperand
+           |     |     |     |           `- "looping"
+           |     |     |     `- *
+           |     |     `- ASingleStatements
+           |     `- carbonated
+           `- AMultipleStatements
+              |- ALoopStatement
+              |  `- AWhileLoopStatement
+              |     |- whelchs
+              |     |- bottle
+              |     |- ACondition
+              |     |  |- AVariableOperand
+              |     |  |  `- outer
+              |     |  |- ALessConditionalLogic
+              |     |  |  `- diet
+              |     |  `- AIntOperand
+              |     |     `- 3
+              |     |- cap
+              |     |- carbonating
+              |     |- AMultipleStatements
+              |     |  |- AAssignmentStatement
+              |     |  |  `- AAssignStatement
+              |     |  |     |- inner
+              |     |  |     |- dew
+              |     |  |     |- APassExpression
+              |     |  |     |  `- APassExpression2
+              |     |  |     |     `- APassExpression3
+              |     |  |     |        `- AIntOperand
+              |     |  |     |           `- 0
+              |     |  |     `- *
+              |     |  `- AMultipleStatements
+              |     |     |- ALoopStatement
+              |     |     |  `- AWhileLoopStatement
+              |     |     |     |- whelchs
+              |     |     |     |- bottle
+              |     |     |     |- ACondition
+              |     |     |     |  |- AVariableOperand
+              |     |     |     |  |  `- inner
+              |     |     |     |  |- ALessConditionalLogic
+              |     |     |     |  |  `- diet
+              |     |     |     |  `- AIntOperand
+              |     |     |     |     `- 2
+              |     |     |     |- cap
+              |     |     |     |- carbonating
+              |     |     |     |- AMultipleStatements
+              |     |     |     |  `- AAssignmentStatement
+              |     |     |     |  |  `- AAssignStatement
+              |     |     |     |  |     |- inner
+              |     |     |     |  |     |- dew
+              |     |     |     |  |     |- AAddExpression
+              |     |     |     |  |     |  |- APassExpression
+              |     |     |     |  |     |  |  `- APassExpression2
+              |     |     |     |  |     |  |     `- APassExpression3
+              |     |     |     |  |     |  |        `- AVariableOperand
+              |     |     |     |  |     |  |           `- inner
+              |     |     |     |  |     |  |- a&w
+              |     |     |     |  |     |  `- APassExpression2
+              |     |     |     |  |     |     `- APassExpression3
+              |     |     |     |  |     |        `- AIntOperand
+              |     |     |     |  |     |           `- 1
+              |     |     |     |  |     `- *
+              |     |     |     |  `- ASingleStatements
+              |     |     |     `- carbonated
+              |     |     `- AMultipleStatements
+              |     |        `- AAssignmentStatement
+              |     |        |  `- AAssignStatement
+              |     |        |     |- outer
+              |     |        |     |- dew
+              |     |        |     |- AAddExpression
+              |     |        |     |  |- APassExpression
+              |     |        |     |  |  `- APassExpression2
+              |     |        |     |  |     `- APassExpression3
+              |     |        |     |  |        `- AVariableOperand
+              |     |        |     |  |           `- outer
+              |     |        |     |  |- a&w
+              |     |        |     |  `- APassExpression2
+              |     |        |     |     `- APassExpression3
+              |     |        |     |        `- AIntOperand
+              |     |        |     |           `- 1
+              |     |        |     `- *
+              |     |        `- ASingleStatements
+              |     `- carbonated
+              `- AMultipleStatements
+                 `- ALoopStatement
+                 |  `- AWhileLoopStatement
+                 |     |- whelchs
+                 |     |- bottle
+                 |     |- ACondition
+                 |     |  |- AVariableOperand
+                 |     |  |  `- count
+                 |     |  |- ALessConditionalLogic
+                 |     |  |  `- diet
+                 |     |  `- AIntOperand
+                 |     |     `- 10
+                 |     |- cap
+                 |     |- carbonating
+                 |     |- AMultipleStatements
+                 |     |  |- AConditionalStatement
+                 |     |  |  `- AIfConditionalStatement
+                 |     |  |     |- pepsi
+                 |     |  |     |- bottle
+                 |     |  |     |- ACondition
+                 |     |  |     |  |- AVariableOperand
+                 |     |  |     |  |  `- count
+                 |     |  |     |  |- AEqualConditionalLogic
+                 |     |  |     |  |  `- squirt
+                 |     |  |     |  `- AIntOperand
+                 |     |  |     |     `- 5
+                 |     |  |     |- cap
+                 |     |  |     |- carbonating
+                 |     |  |     |- AMultipleStatements
+                 |     |  |     |  `- AAssignmentStatement
+                 |     |  |     |  |  `- AAssignStatement
+                 |     |  |     |  |     |- message
+                 |     |  |     |  |     |- dew
+                 |     |  |     |  |     |- APassExpression
+                 |     |  |     |  |     |  `- APassExpression2
+                 |     |  |     |  |     |     `- APassExpression3
+                 |     |  |     |  |     |        `- AStringOperand
+                 |     |  |     |  |     |           `- "halfway"
+                 |     |  |     |  |     `- *
+                 |     |  |     |  `- ASingleStatements
+                 |     |  |     |- carbonated
+                 |     |  |     `- APresentElsePart
+                 |     |  |        |- dietpepsi
+                 |     |  |        |- carbonating
+                 |     |  |        |- AMultipleStatements
+                 |     |  |        |  `- AAssignmentStatement
+                 |     |  |        |  |  `- AAssignStatement
+                 |     |  |        |  |     |- message
+                 |     |  |        |  |     |- dew
+                 |     |  |        |  |     |- APassExpression
+                 |     |  |        |  |     |  `- APassExpression2
+                 |     |  |        |  |     |     `- APassExpression3
+                 |     |  |        |  |     |        `- AStringOperand
+                 |     |  |        |  |     |           `- "continuing"
+                 |     |  |        |  |     `- *
+                 |     |  |        |  `- ASingleStatements
+                 |     |  |        `- carbonated
+                 |     |  `- AMultipleStatements
+                 |     |     `- AAssignmentStatement
+                 |     |     |  `- AAssignStatement
+                 |     |     |     |- count
+                 |     |     |     |- dew
+                 |     |     |     |- AAddExpression
+                 |     |     |     |  |- APassExpression
+                 |     |     |     |  |  `- APassExpression2
+                 |     |     |     |  |     `- APassExpression3
+                 |     |     |     |  |        `- AVariableOperand
+                 |     |     |     |  |           `- count
+                 |     |     |     |  |- a&w
+                 |     |     |     |  `- APassExpression2
+                 |     |     |     |     `- APassExpression3
+                 |     |     |     |        `- AIntOperand
+                 |     |     |     |           `- 1
+                 |     |     |     `- *
+                 |     |     `- ASingleStatements
+                 |     `- carbonated
+                 `- ASingleStatements
+
  
-Incorrect Comparison Operators 
-[1,1] Unknown token: =
+INPUT: 
+whelchs bottle count diet cap carbonating
+    count dew count a&w 1*
+carbonated 
+whelchs bottle count diet 5 carbonating
+    count dew count a&w 1*
+carbonated 
+whelchs bottle count diet 5 cap carbonating
+    count dew count a&w 1* 
+ 
+Incorrect Loops 
+[1,27] expecting: integer, float, string literal, id
+[1,29] expecting: 'cap'
+[2,27] expecting: 'carbonated'
  
  
-IDENTIFIERS AND COMMENTS ----------------------------------- 
+PROGRAM STRUCTURE ----------------------------------- 
  
-Correct Identifier 
-Read token 'TId', Text = [_hello_] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,8]
-Read token 'TId', Text = [validCVariable] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,15]
-Read token 'TId', Text = [_privateVar] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,12]
-Read token 'TId', Text = [count1] at [4,1]
-Read token 'TBlank', Text = [
-] at [4,7]
-Read token 'TId', Text = [sum_total] at [5,1]
-Read token 'TBlank', Text = [
-] at [5,10]
-Read token 'TId', Text = [MAX_LIMIT] at [6,1]
-Read token 'TBlank', Text = [
-] at [6,10]
-Read token 'TId', Text = [camelCaseVar] at [7,1]
-Read token 'TBlank', Text = [
-] at [7,13]
-Read token 'TId', Text = [x2] at [8,1]
-Read token 'TBlank', Text = [
-] at [8,3]
-Read token 'EOF', Text = [] at [9,1]
+INPUT: 
+coke sevenup max_count dew 10*
+coke rootbeer base_rate dew 0.75*
+coke sprite greeting dew "hello"*
+
+display bottle sprite message cap carbonating
+    message dew greeting*
+carbonated
+
+increment bottle sevenup count cap carbonating
+    count dew count a&w 1*
+carbonated
+
+carbonation bottle cap carbonating
+    sevenup count*
+    count dew max_count*
+    display bottle greeting cap*
+    increment bottle count cap*
+carbonated 
+Correct Program Structure 
+[5,16] expecting: 'cap'
  
-Incorrect Identifier 
-Read token 'TId', Text = [__init] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,7]
-Read token 'TInteger', Text = [123412] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,7]
-Read token 'TId', Text = [__AS_D_A_SD__S_] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,16]
-Read token 'TInteger', Text = [1] at [4,1]
-Read token 'TId', Text = [variable] at [4,2]
-Read token 'TBlank', Text = [
-] at [4,10]
-Read token 'TId', Text = [var] at [5,1]
-[5,4] Unknown token: @
+INPUT: 
+greet bottle cap carbonating
+    sprite message*
+    message dew "hello"*
+carbonated
+
+coke sevenup limit dew 10*
+
+carbonation bottle cap carbonating
+    greet bottle cap*
+carbonated 
+carbonation bottle cap carbonating
+    sevenup count*
+    count dew 0*
+carbonated
+
+greet bottle cap carbonating
+    sprite message*
+    message dew "hello"*
+carbonated 
+coke sevenup limit dew 10*
+
+greet bottle cap carbonating
+    sprite message*
+    message dew "hello"*
+carbonated 
  
-Correct Comment 
-Read token 'TComment', Text = [oO Comment] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,11]
-Read token 'TComment', Text = [oOComment2 ] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,12]
-Read token 'TComment', Text = [oO                                Comment3] at [3,1]
-Read token 'EOF', Text = [] at [3,43]
- 
-Incorrect Comment 
-Read token 'TId', Text = [Oo] at [1,1]
-[1,3] Unknown token:  C
- 
-Detect double underscore 
-Read token 'TId', Text = [__] at [1,1]
-Read token 'TBlank', Text = [
-] at [1,3]
-Read token 'TId', Text = [____] at [2,1]
-Read token 'TBlank', Text = [
-] at [2,5]
-Read token 'TId', Text = [___] at [3,1]
-Read token 'TBlank', Text = [
-] at [3,4]
-Read token 'TId', Text = [_] at [4,1]
-Read token 'EOF', Text = [] at [4,2]
+Incorrect Program Structure 
+[1,18] expecting: '*'
+[1,1] expecting: EOF
+[3,18] expecting: '*'
  
 ======================================== 
-TESTING COMPLETE                         
+TESTING COMPLETE 
 ======================================== 

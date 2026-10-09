@@ -3,7 +3,7 @@ Package CS426;
 
 // Helpers are sets that let you talk about multiple characters in the same way
 Helpers
-	whitespaces = '  ' | 9 | 10 | 13;
+	whitespaces = ' ' | 9 | 10 | 13;
 	natural = ['1'..'9'];
 	whole = ['0' + natural];
 	letter = [['a'..'z'] + ['A'..'Z']];
@@ -15,6 +15,7 @@ Helpers
 
 // PEX 1 - Lexer Portion
 Tokens
+
 	// 1. Data Type & Declaration Keywords 
 	kw_int = 'sevenup';
 	kw_float = 'rootbeer';
@@ -58,27 +59,95 @@ Tokens
     	lte = 'zero';    // <= (Less than or equal to)
 
 	// 6. Identifiers & Ignored Tokens 
-	id = ((letter | ('_' (letter | digit))) (letter | digit | '_' (letter | digit)))*;
+	id = letter (letter | digit | ('_' (letter | digit)))* '_'?
+   		| '_' (letter | digit) (letter | digit | ('_' (letter | digit)))* '_'?
+   		| '_';
 	comment = 'oO' ([[0..0xffff] - [10 + 13]])*;
 	blank = whitespaces+;
 	double_underscore = ('__')+;
+	comma = ',';
 
 Ignored Tokens
 	blank, comment;
 
-
 // PEX 2 - Parser Portion
 Productions
-	program = statements;
-	statements = {multiple} statement statements | {single} ;
-	statement = {declaration} declare_statement;
-	
-	declare_statement = [type] : id [varname] : id eol;
-// things I need to inlclude 
-//declarations
-//assignments
-// Function call
-// Conditional Satemets
+
+// Current program: a list of statements
+// LATER (step 4): enforce constants -> procedures -> main
+program = statements;
+
+statements = {multiple} statement statements | {single};
+
+statement = {assignment} assign_statement
+          | {declaration} declare_statement
+          | {constant} declare_const_statement
+          | {call} function_call_statement
+          | {conditional} conditional_statement
+          | {loop} loop_statement;
+
+// Written: assignments
+assign_statement = id assign expression eol;
+
+// Written: variable declarations for all three types
+declare_statement = type [varname]:id eol;
+
+// Written: initialized constants, including negative numbers
+// LATER (step 4): move constants out of general statements
+declare_const_statement = {constant} kw_const const_type eol;
+
+const_type = {const_int} kw_int [varname]:id assign neg? integer
+           | {const_float} kw_float [varname]:id assign neg? float
+           | {const_string} kw_str [varname]:id assign string_literal;
+
+type = {int} kw_int | {float} kw_float | {string} kw_str;
+
+// Written: calls with zero, one, or multiple arguments
+function_call_statement = id l_paren parameters r_paren eol;
+parameters = {some} expressions | {empty};
+expressions = {one} expression | {many} expression comma expressions;
+
+// Written: addition, multiplication, negation, and basic operands
+// Then integrate comparisons and AND/OR/NOT with required precedence
+
+expression = {add} expression plus expression2 | {subtract} expression minus expression2 | {pass} expression2;
+expression2 = {multiply} expression2 mult expression3
+            | {divide} expression2 div expression3
+            | {pass} expression3;
+expression3 = {negative} neg operand | {pass} operand;
+
+operand = {int} integer | {float} float
+        | {string} string_literal | {variable} id;
+
+// Written: IF with optional ELSE
+// STEP 1: use the expanded expression grammar for conditions
+conditional_statement = {if} kw_if l_paren condition r_paren
+                        l_brace statements r_brace else_part;
+
+else_part = {present} kw_else l_brace statements r_brace | {absent};
+
+// Current comparisons: one operand on each side
+// STEP 1: integrate these operators into the expression grammar
+condition = [left]:operand conditional_logic [right]:operand;
+conditional_logic = {equal} eq | {greater} gt | {greater_eq} gte
+                  | {less} lt | {less_eq} lte;
+
 //Loops
+loop_statement = {while} kw_while l_paren condition r_paren l_brace statements r_brace;
+
+// STEP 3: write procedure definitions with zero or more parameters
+// Calls above are already written; definitions are still missing
+// Procedure Definitions 
+procedure_definition =  [procedure_name]:id l_paren parameters r_paren l_brace statements r_brace;
+//parameter_declarations
+
+
+// STEP 4: write main and enforce overall program ordering
+// Constants first, procedure definitions next, main last
+
+// TESTING: finish declaration/constant tests before new grammar work
+// After each feature: generate, rebuild, test valid and invalid cases
+// Add arithmetic/logical tests and inspect precedence in parse trees
+// Add each completed test to PEX_TEST.bat
 
 	

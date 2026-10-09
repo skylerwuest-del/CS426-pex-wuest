@@ -47,10 +47,10 @@
   <ItemGroup>
     <Compile Include="analysis.cs" />
     <Compile Include="lexer.cs" />
+    <Compile Include="main.cs" />
     <Compile Include="nodes.cs" />
     <Compile Include="parser.cs" />
     <Compile Include="prods.cs" />
-    <Compile Include="lexer_main.cs" />
     <Compile Include="tokens.cs" />
   </ItemGroup>
   <ItemGroup>

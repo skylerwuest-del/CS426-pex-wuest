@@ -884,6 +884,31 @@ public sealed class TDoubleUnderscore : Token
     }
 }
 
+public sealed class TComma : Token
+{
+    public TComma(string text)
+    {
+        Text = text;
+    }
+
+    public TComma(string text, int line, int pos)
+    {
+        Text = text;
+        Line = line;
+        Pos = pos;
+    }
+
+    public override Object Clone()
+    {
+      return new TComma(Text, Line, Pos);
+    }
+
+    public override void Apply(Switch sw)
+    {
+        ((Analysis) sw).CaseTComma(this);
+    }
+}
+
 
 public abstract class Token : Node
 {
