@@ -1,0 +1,6 @@
+coke sevenup limit dew 10*
+
+greet bottle cap carbonating
+    sprite message*
+    message dew "hello"*
+carbonated

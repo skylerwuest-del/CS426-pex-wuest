@@ -1,0 +1,7 @@
+show_count bottle sevenup cap carbonating
+    sevenup result*
+carbonated
+
+carbonation bottle cap carbonating
+    sevenup result*
+carbonated

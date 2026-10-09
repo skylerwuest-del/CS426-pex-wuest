@@ -1,0 +1,7 @@
+update bottle sevenup count rootbeer rate cap carbonating
+    count dew 1*
+carbonated
+
+carbonation bottle cap carbonating
+    sevenup result*
+carbonated

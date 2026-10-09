@@ -1,0 +1,20 @@
+greet bottle cap carbonating
+    sprite message*
+    message dew "hello"*
+carbonated
+
+show_count bottle sevenup count cap carbonating
+    count dew count a&w 1*
+carbonated
+
+update bottle sevenup count, rootbeer rate, sprite message cap carbonating
+    count dew count a&w 1*
+    rate dew rate mug 2.0*
+    message dew "updated"*
+carbonated
+
+carbonation bottle cap carbonating
+    greet bottle cap*
+    show_count bottle 7 cap*
+    update bottle 7, 0.75, "hello" cap*
+carbonated

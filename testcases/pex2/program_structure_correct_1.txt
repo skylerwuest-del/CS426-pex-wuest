@@ -1,0 +1,18 @@
+coke sevenup max_count dew 10*
+coke rootbeer base_rate dew 0.75*
+coke sprite greeting dew "hello"*
+
+display bottle sprite message cap carbonating
+    message dew greeting*
+carbonated
+
+increment bottle sevenup count cap carbonating
+    count dew count a&w 1*
+carbonated
+
+carbonation bottle cap carbonating
+    sevenup count*
+    count dew max_count*
+    display bottle greeting cap*
+    increment bottle count cap*
+carbonated

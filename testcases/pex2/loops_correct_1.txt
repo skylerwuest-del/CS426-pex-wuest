@@ -1,0 +1,25 @@
+whelchs bottle count diet 5 cap carbonating
+    count dew count a&w 1*
+carbonated
+
+whelchs bottle score zero 10 cap carbonating
+    score dew score a&w 1*
+    message dew "looping"*
+carbonated
+
+whelchs bottle outer diet 3 cap carbonating
+    inner dew 0*
+    whelchs bottle inner diet 2 cap carbonating
+        inner dew inner a&w 1*
+    carbonated
+    outer dew outer a&w 1*
+carbonated
+
+whelchs bottle count diet 10 cap carbonating
+    pepsi bottle count squirt 5 cap carbonating
+        message dew "halfway"*
+    carbonated dietpepsi carbonating
+        message dew "continuing"*
+    carbonated
+    count dew count a&w 1*
+carbonated

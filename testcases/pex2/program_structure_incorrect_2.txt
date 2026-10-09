@@ -1,0 +1,9 @@
+carbonation bottle cap carbonating
+    sevenup count*
+    count dew 0*
+carbonated
+
+greet bottle cap carbonating
+    sprite message*
+    message dew "hello"*
+carbonated

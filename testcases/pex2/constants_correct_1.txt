@@ -1,0 +1,8 @@
+coke sevenup max_score dew 100*
+coke sevenup min_score dew -5*
+coke sevenup zero_value dew 0*
+coke rootbeer rate dew 0.75*
+coke rootbeer low_temperature dew -6.7*
+coke rootbeer tiny_value dew 5.2e-4*
+coke sprite greeting dew "hello world"*
+coke sprite empty_message dew ""*

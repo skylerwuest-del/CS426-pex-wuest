@@ -1,0 +1,6 @@
+function bottle parameter cap*
+foo bottle 7, 6.7, "hello" cap*
+foo bottle 7 cap*
+foo bottle 6.7 cap*
+foo bottle "H" cap*
+foo bottle cap*

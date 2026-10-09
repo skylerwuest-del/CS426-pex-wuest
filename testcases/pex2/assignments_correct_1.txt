@@ -1,0 +1,3 @@
+variable dew 7*
+var1 dew 0.67*
+stringer dew "hello world"*

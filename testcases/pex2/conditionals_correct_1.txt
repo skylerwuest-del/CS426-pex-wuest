@@ -1,0 +1,34 @@
+pepsi bottle score squirt 5 cap carbonating
+    result dew 1*
+carbonated
+
+pepsi bottle score sugar 5 cap carbonating
+    result dew 2*
+carbonated dietpepsi carbonating
+    result dew 0*
+carbonated
+
+pepsi bottle score caffeine 5 cap carbonating
+    result dew 3*
+    message dew "at least five"*
+carbonated
+
+pepsi bottle score diet 10 cap carbonating
+    result dew 4*
+carbonated
+
+pepsi bottle score zero 10 cap carbonating
+    result dew 5*
+carbonated dietpepsi carbonating
+    result dew 6*
+carbonated
+
+pepsi bottle score sugar 0 cap carbonating
+    pepsi bottle score diet 10 cap carbonating
+        result dew 7*
+    carbonated dietpepsi carbonating
+        result dew 8*
+    carbonated
+carbonated dietpepsi carbonating
+    result dew 0*
+carbonated

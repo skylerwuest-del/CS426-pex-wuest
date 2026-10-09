@@ -1,0 +1,7 @@
+show_count bottle count cap carbonating
+    count dew 1*
+carbonated
+
+carbonation bottle cap carbonating
+    sevenup result*
+carbonated
